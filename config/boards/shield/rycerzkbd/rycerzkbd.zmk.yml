@@ -1,14 +1,12 @@
 file_format: "1"
-id: mycorne
-name: My Corne
+id: rycerzkbd
+name: Rycerz kbd
 type: shield
 url: https://github.com/Piotrryt/zmk-config
 requires: [pro_micro]
 exposes: [i2c_oled]
 features:
   - keys
-  - display
-  - underglow
 siblings:
-  - mycorne_left
-  - mycorne_right
+  - rycerzkbd_left
+  - rycerzkbd_right
