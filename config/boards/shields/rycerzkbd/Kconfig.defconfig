@@ -1,7 +1,7 @@
 if SHIELD_RYCERZKBD_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "My Corne"
+    default "Rycerz kbd"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y

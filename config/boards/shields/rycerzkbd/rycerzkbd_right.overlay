@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "mycorne.dtsi"
+#include "rycerzkbd.dtsi"
 
 &default_transform {
     col-offset = <6>;
