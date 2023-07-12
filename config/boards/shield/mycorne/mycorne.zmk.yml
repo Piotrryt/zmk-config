@@ -1,0 +1,14 @@
+file_format: "1"
+id: mycorne
+name: My Corne
+type: shield
+url: https://github.com/Piotrryt/zmk-config
+requires: [pro_micro]
+exposes: [i2c_oled]
+features:
+  - keys
+  - display
+  - underglow
+siblings:
+  - corne_left
+  - corne_right
