@@ -69,10 +69,10 @@ hold-tap tapping-term-ms 200ms
 	tapping-term-ms 200ms - jak długo ma być wciśniety by był hold			
 	flavor jedno w w/w
 	quick-tap-ms minusowa wyłcza  doddatnia oznacza że jeżeli w tym czasie naciśniemy ten przycisk po drugi raz to zadziała jak tap
-	global-quick-tap bool zminia to co wyżej że poprzedzający może być dowolnu klawisz
+	global-quick-tap bool zminia to co wyżej że poprzedzający może być dowolnu klawisz dobre dla home row mods gdy piszesz szybko 
 	retro-tap - jak wciśniemy i puścimy to tap o ile nic nie było wciśnięte pomiędzy
 	hold-trigger-key-positions lista pozycji na klawiaturze która  wywołuje hold jak  jakiś z poza listy zawsze jako tap trohę fajne na home row trochę nie bo nie możan użyć na wiele modyfikatorów chuba że z 
-	hold-trigger-on-release bool co spowalnie badanie elementów z listy
+	hold-trigger-on-release bool co spowalnie badanie elementów z listy ale dobre pry home row jak potrzeba wielu modyfikatorów
 	
 Toggle-on-Tap, Momentary-on-Hold Layers	
 	#include <dt-bindings/zmk/keys.h>
