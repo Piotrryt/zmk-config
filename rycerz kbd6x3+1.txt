@@ -1,0 +1,129 @@
+                DefaultColemak(0)
+//-----------------------------------------------------------------
+//|  Q  |  W  |  F  |  P  |  B  |||||  J  |  L  |  U  |  Y  |  ;  |
+//|  A  |  R  |  S  |  T  |  G  |||||  M  |  N  |  E  |  I  |  O  |   '
+//|  Z  |  X  |  C  |  D  |  V  |||||  K  |  H  |  ,  |  .  |  /  |
+//     | GUI |ht(10)| SPC |CTRL ||||| (1) | ENT | (9) | ALT |
+
+                ColemakInternational(1)(3)
+//--------------------------------------------------------------------------
+//|     |     |     |     |     |||||     |  Ł  |     |     |     |
+//|  Ą  |     |  Ś  |     |     |||||     |  Ń  |  Ę  |     |  Ó  |
+//|  Ż  |  Ź  |  Ć  |     |     |||||     |     |     |     |     |
+//      | GUI | (10)| SPC |CTRL ||||| (12)| ENT | (9) | ALT |
+
+                Qwerty(2)(5)
+//--------------------------------------------------------------------------
+//|  Q  |  W  |  E  |  R  |  T  |||||  Y  |  U  |  I  |  O  |  P  |
+//|  A  |  S  |  D  |  F  |  G  |||||  H  |  J  |  K  |  L  |  ;  |  '     |
+//|  Z  |  X  |  C  |  V  |  B  |||||  N  |  M  |  ,  |  .  |  /  |
+//      | GUI | (10)| SPC |CTRL ||||| (3) | ENT | (9) | ALT |
+
+                QwertyInternational(3)(6)
+//----------------------------------------------------------------------------------
+//|     |     |  Ę  |     |     |||||     |     |     |  Ó  |     | BKSP   |
+//|  Ą  |  Ś  |     |     |     |||||     |     |     |  Ł  |     |        |
+//|  Ż  |  Ź  |  Ć  |     |     |||||  Ń  |     |     |     |     | SHFT   |
+//      | GUI | (10)| SPC |CTRL ||||| (12)| ENT | (9) | ALT |
+
+
+                NumAndSym(9)(1)
+// ---------------------------------------------------------------------------------
+//|    `   |  1  |  2  |  3  |  4  |  5  |||||  6  |  7  |  8  |  9  |  0  |  \     |                
+//|    ~   |  !  |  @  |  #  |  $  |  %  |||||  ^  |  &  |  *  |  (  |  )  | "|"    |      ; : ' "  <  > 
+//|    _   |  -  |  +  |  =  |  {  |  }  |||||  [  |  ]  |  ,  |  .  |  /  |  ?     |
+//               |SHFT |     | ALT |CTRL ||||| --- | --- | -X- | --- |
+
+                FuncArrowSpec(10)(2)
+// ---------------------------------------------------------------------------------
+//|   F1   | F2  | F3  | F4  | F5  | F6  ||||| F7  | F8  | F9  | F10 | F11 | BKSP   |
+//|   F12  | F13 | F14 | F15 | F16 | F17 ||||| LFT | DWN |  UP | RGT | INS | DEL    |
+//|   F18  | F19 | F20 | F21 | F22 | F23 ||||| HOM |PGDN |PGUP | END |KAPP | SHFT   |
+//               | --- | -X- | --- | --- ||||| hGUI|a TAB|hCTRL|hALT |
+
+
+                Techn (12)
+// ---------------------------------------------------------------------------------
+//|        |     |     |     |     |     |||||     |     |     |     |     | BKSP   |
+//| BTCLR  | BT1 | BT2 | BT3 | BT4 | BT5 |||||     |     |     |     |     |        |
+//| SHFT   |     |     |     |     |     |||||     |     |     |     |     |        |
+//               | GUI |     | SPC | SPC ||||| ENT | ENT |     | ALT |
+
+
+
+
+				
+				
+				Frogpad(4)
+//----------------------------------------------------------------------------------    osm - przyciśnij i puść wciśniety do puki nie nacishnę następnego (stiky kwey )
+//|  ESC   |  F  |  D  |  N  |  I  |  G  |||||  G  |  I  |  N  |  D  |  F  |  ESC   |	OSL(layer) - momentarily activates layer until the next key is pressed
+/lt(10,bsp)|  S  |  T  |  H  |  E  |  O  |||||  O  |  E  |  H  |  T  |  S  |lt(10,bsp)  LT(layer, kc) - momentarily activates layer when held, and sends kc when tapped. 
+//|osmSHFT |  C  |  W  |  R  |  A  |  U  |||||  U  |  A  |  R  |  W  |  C  |osmSHFT |                          
+//               |osl 9|osl 8| SPC |lt11?||||| --- | SPC |osl 8|osl 9|
+	
+//---------------------------------------------------------------------------------- 
+//|  ENT   |  J  |  K  |  M  |  '  |  -  |||||  -  |  '  |  M  |  K  |  J  |  ENT   |   -- to jest realizowane przez combosy ale tylko na tej warstwie frog pad 
+/lt(10,bsp)|  Y  |  P  |  L  |  .  |  Q  |||||  Q  |  .  |  L  |  P  |  Y  |lt(10,bsp)   combo z SPC
+//|osmSHFT |  X  |  B  |  V  |  ,  |  Z  |||||  Z  |  ,  |  V  |  B  |  X  |osmSHFT |
+//               |     |     | -X- | --- ||||| --- | -X- |     |     |				
+				Frogint(5)
+//---------------------------------------------------------------------------------- 
+//|        |     |     |  Ń  |     |     |||||     |     |  Ń  |     |     |        |
+//|        |  Ś  |     |     |  Ę  |  Ó  |||||  Ó  |  Ę  |     |     |  Ś  |        |  
+//|        |  Ć  |     |     |  Ą  |     |||||     |  Ą  |     |     |  Ć  |        |        
+//               |     |     |     |     |||||     |     |     |     |
+//---------------------------------------------------------------------------------- 
+//|        |     |     |     |     |     |||||     |     |     |     |     |        |   combo z  tym czym s 
+//|        |     |     |  Ł  |     |     |||||     |     |  Ł  |     |     |        |  
+//|        |  Ź  |     |     |     |  Ż  |||||  Ż  |     |     |     |  Ź  |        |
+//               |     |     |     |     |||||     |     |     |     |
+
+				
+				Frogsym(6)
+//---------------------------------------------------------------------------------- 
+//|  TAB   |  [  |  {  |  (  |  @  |  ^  |||||  ^  |  @  |  (  |  {  |  [  |  TAB   |
+//|   \    |  :  |  ;  |  ?  |  !  |  /  |||||  /  |  !  |  ?  |  ;  |  :  |   \    |  
+//|   ~    |  ]  |  }  |  )  |  &  |  *  |||||  *  |  &  |  )  |  }  |  ]  |   ~    |
+//               | --- | --- | --- | --- ||||| --- | --- | --- | --- |					
+				Frognum(7)
+//---------------------------------------------------------------------------------- 
+//|   =    |  6  |  7  |  8  |  9  |  .  |||||     |     |     |     |     |        |
+//|   +    |  1  |  2  |  3  |  4  |  5  |||||     |     |     |     |     |        |  
+//|   -    |  #  |  $  |  %  |  0  |  ,  |||||     |     |     |     |     |        |
+//               | --- | ---|osmGUI| --- ||||| --- |osmGUI|--- | --- |
+				Frogext(8)
+//---------------------------------------------------------------------------------- 
+//|        | BACK| HOM | UP  | END |FRWD |||||FRWD | END | UP  | HOM | BACK|        |
+//|  -X-   |a TAB| LFT | DWN | RGT | DEL ||||| DEL | LFT | DWN | RGT |a TAB|  -X-   |  
+//|        | c Z | c X | c C | c V |osmALT|||osmALT| c V | c C | c X | c Z |        |
+//          |osmSHFT|osmCTRL|c BKSP| --- ||||| --- |c BKSP|osmCTRL|osmSHFT|
+
+
+Letters 
+ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+ Ą Ć Ę Ł Ń Ó Ś Ź Ż
+numbers
+ 1 2 3 4 5 6 7 8 9 0
+ ! @ # $ % ^ & * ( )
+symbols punctuaction 
+ ! @ # $ % ^ & * ( ) = + - _ / ? \ | ; : ' " , < . > [ { ] } ` ~
+control whitespace
+ ESC ENT SPC TAB BSPC DEL INS
+spcial control
+ 
+navigation
+ HOM END PGUP PGDN UP DWN LFT RGT KAPP GUI(win)
+special navigation 
+ [CRTL GUI LFT][CRTL GUI RGT][LALT SHFT TAB] [LALT TAB] [CRTL SHFT TAB] [CRTL TAB]  
+modifiers
+ SHFT CTRL LALT RALT GUI
+locks 
+ CAPS SLCK
+f
+F1 - F24  (anroid  f1-f12)
+misc 
+ PSCRN P/B -- pause break 
+ 
+ 
+ 
+ 
