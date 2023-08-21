@@ -130,27 +130,27 @@ DEL ENTnav TABfn  BKSPmedia SPCsym
 
 
 Letters 
- A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
- Ą Ć Ę Ł Ń Ó Ś Ź Ż
+26 A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+9  Ą Ć Ę Ł Ń Ó Ś Ź Ż
 numbers
- 1 2 3 4 5 6 7 8 9 0
- ! @ # $ % ^ & * ( )
+10 1 2 3 4 5 6 7 8 9 0
+   ! @ # $ % ^ & * ( )
 symbols punctuaction 
- ! @ # $ % ^ & * ( ) = + - _ / ? \ | ; : ' " , < . > [ { ] } ` ~
+32 ! @ # $ % ^ & * ( ) = + - _ / ? \ | ; : ' " , < . > [ { ] } ` ~
 control whitespace
- ESC ENT SPC TAB BSPC DEL INS
+7  ESC ENT SPC TAB BSPC DEL INS
 spcial control
- [CTRL BSPC] [CTRL SHFT BSPC] [CTRL DEL] [CTRL SHFT DEL] 
+4  [CTRL BSPC] [CTRL SHFT BSPC] [CTRL DEL] [CTRL SHFT DEL] 
 navigation
- HOM END PGUP PGDN UP DWN LFT RGT KAPP GUI(win)
+10 HOM END PGUP PGDN UP DWN LFT RGT KAPP GUI(win)
 special navigation 
- [CTRL GUI LFT][CTRL GUI RGT][LALT SHFT TAB][LALT TAB][CTRL SHFT TAB][CTRL TAB]  
+6  [CTRL GUI LFT][CTRL GUI RGT][LALT SHFT TAB][LALT TAB][CTRL SHFT TAB][CTRL TAB]  
 modifiers
- SHFT CTRL LALT RALT GUI
+5  SHFT CTRL LALT RALT GUI
 special modifiers
- [CTRL LALT] [CTRL SHFT LALT] [CTRL GUI] [CTRL LALT GUI][CTRL SHFT LALT GUI] [LALT GUI] [LALT SHFT GUI]  
+7  [CTRL LALT] [CTRL SHFT LALT] [CTRL GUI] [CTRL LALT GUI][CTRL SHFT LALT GUI] [LALT GUI] [LALT SHFT GUI]  
 locks 
- CAPS SLCK
+2 CAPS SLCK
 f
 F1 - F24  (anroid  f1-f12)
 misc 
