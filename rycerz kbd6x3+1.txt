@@ -6,7 +6,7 @@ HOME ROW MODS
 //| asg | csa | ca  | as  | ag  ||||| ag  | as  | ca  | csa | asg |
 //|  k  |  s  |  c  |  a  |  g  |||||  g  |  a  |  c  |  s  |  k  |
 //| cag |csag | si()| i() | cg  ||||| cg  | i() | si()|csag | cag |
-//      | DEL | ESC |     | TAB ||||| ENT |     | SPC |BSPC |
+//      | ESC |     | DEL | TAB ||||| ENT | SPC |     |BSPC |
 
 DefaultColemak(0)
 //-----------------------------------------------------------------
