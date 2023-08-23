@@ -6,57 +6,71 @@ HOME ROW MODS
 //| asg | csa | ca  | as  | ag  ||||| ag  | as  | ca  | csa | asg |
 //|  k  |  s  |  c  |  a  |  g  |||||  g  |  a  |  c  |  s  |  k  |
 //| cag |csag | si()| i() | cg  ||||| cg  | i() | si()|csag | cag |
-//      | ESC |     | DEL | TAB ||||| ENT | SPC |     |BSPC |
+//      |ESC12|DEL13|TAB16|     |||||     |ENT14|SPC11|BSPC15
+ESCnumpad DELnav TABmouse                  ENTfn SPCnumsym BSPCtech 
+
+//-----------------------------------------------------------------
+//  0x|  1 |  2 |  3 |  4 |  5 |||||  6 |  7 |  8 |  9 | 10 | 11x
+// 12x| 13 | 14 | 15 | 16 | 17 ||||| 18 | 19 | 20 | 21 | 22 | 23x
+// 24x| 25 | 26 | 27 | 28 | 29 ||||| 30 | 31 | 32 | 33 | 34 | 35x
+//         | 36 | 37 | 38 | 39x||||| 40x| 41 | 42 | 43 
 
 DefaultColemak(0)
 //-----------------------------------------------------------------
 //|  Q  |  W  |  F  |  P  |  B  |||||  J  |  L  |  U  |  Y  | ; : |
 //|  A  |  R  |  S  |  T  |  G  |||||  M  |  N  |  E  |  I  |  O  |
 //|  Z  |  X  |  C  |  D  |  V  |||||  K  |  H  | , < | . > | / ? |
-//      | DEL | ESC |     | TAB ||||| ENT |     | SPC |BSPC |
+//      |ESC12|DEL13|TAB16|     |||||     |ENT14|SPC11|BSPC15
 
 ColemakInternational(1)
 //-----------------------------------------------------------------
-//|     |     |     |     |     |||||     |  Ł  |     |     |     |
-//|  Ą  |     |  Ś  |     |     |||||     |  Ń  |  Ę  |     |  Ó  |
-//|  Ż  |  Ź  |  Ć  |     |     |||||     |     |     |     | ' " |
-//      | DEL | ESC |     | TAB ||||| ENT |     | SPC |BSPC |
+//|     |     |  .  |     |     |||||     |  Ł  |     |  .  |     |
+//|  Ą  |  .  |  Ś  |     |     |||||     |  Ń  |  Ę  |  .  |  Ó  | kp
+//|  Ż  |  Ź  |  Ć  |     |     |||||  .  |     |     |     | ' " |
+//      |ESC12|DEL13|TAB16|     |||||     |ENT14|SPC11|BSPC15
 
 ColemakInternationalUpper(2)
 //-----------------------------------------------------------------
-//|     |     |     |     |     |||||     |  Ł  |     |     |     |
-//|  Ą  |     |  Ś  |     |     |||||     |  Ń  |  Ę  |     |  Ó  |
-//|  Ż  |  Ź  |  Ć  |     |     |||||     |     |     |     | ' " |
-//      | DEL | ESC |     | TAB ||||| ENT |     | SPC |BSPC |
+//|     |     |  .  |     |     |||||     |  Ł  |     |  .  |     |
+//|  Ą  |  .  |  Ś  |     |     |||||     |  Ń  |  Ę  |  .  |  Ó  |
+//|  Ż  |  Ź  |  Ć  |     |     |||||  .  |     |     |     | ' " |
+//      |ESC12|DEL13|TAB16|     |||||     |ENT14|SPC11|BSPC15
 
 Qwerty(3)
 //-----------------------------------------------------------------
 //|  Q  |  W  |  E  |  R  |  T  |||||  Y  |  U  |  I  |  O  |  P  |
 //|  A  |  S  |  D  |  F  |  G  |||||  H  |  J  |  K  |  L  | ; : |
 //|  Z  |  X  |  C  |  V  |  B  |||||  N  |  M  | , < | . > | / ? |
-//      | DEL | ESC |     | TAB ||||| ENT |     | SPC |BSPC |
+//      |ESC12|DEL13|TAB16|     |||||     |ENT14|SPC11|BSPC15
 
 QwertyInternational(4)
 //-----------------------------------------------------------------
-//|     |     |  Ę  |     |     |||||     |     |     |  Ó  |     |
-//|  Ą  |  Ś  |     |     |     |||||     |     |     |  Ł  |     |
+//|     |     |  Ę  |     |     |||||     |  .  |     |  Ó  |     |
+//|  Ą  |  Ś  |  .  |     |     |||||     |  .  |  .  |  Ł  |  .  |
 //|  Ż  |  Ź  |  Ć  |     |     |||||  Ń  |     |     |     | ' " |
-//      | DEL | ESC |     | TAB ||||| ENT |     | SPC |BSPC |
+//      |ESC12|DEL13|TAB16|     |||||     |ENT14|SPC11|BSPC15
 
 QwertyInternationalUpper(5)
 //-----------------------------------------------------------------
-//|     |     |  Ę  |     |     |||||     |     |     |  Ó  |     |
-//|  Ą  |  Ś  |     |     |     |||||     |     |     |  Ł  |     |
+//|     |     |  Ę  |     |     |||||     |  .  |     |  Ó  |     |
+//|  Ą  |  Ś  |  .  |     |     |||||     |  .  |  .  |  Ł  |  .  |
 //|  Ż  |  Ź  |  Ć  |     |     |||||  Ń  |     |     |     | ' " |
-//      | DEL | ESC |     | TAB ||||| ENT |     | SPC |BSPC |
+//      |ESC12|DEL13|TAB16|     |||||     |ENT14|SPC11|BSPC15
 
-
-NumAndSym(9)
+NumAndSym(11)
+kr &key_repeat cw &caps_word pw &prog_caps
 //----------------------------------------------------------------
 //| 1 ! | 2 @ | 3 # | 4 $ | 5 % ||||| 6 ^ | 7 & | 8 * | 9 ( | 0 ) |                
-//| ` ~ |     |     |     |     ||||| - _ | = + | [ { | ] } | \"|"|  
-//|     |     |     |     |     ||||| ; : | ' " | , < | . > | / ? | 
-//      | DEL | ESC |     | TAB ||||| ENT |     | SPC |BSPC |
+//| ` ~ |     |  kr | cw  |     ||||| - _ | = + | [ { | ] } | \"|"|  
+//|     |     |     | cw2 |     ||||| ; : | ' " | , < | . > | / ? | 
+//      |ESC12|DEL13|TAB16|     |||||     |ENT14|SPC11|BSPC15
+
+NumPad(12)
+//----------------------------------------------------------------
+//|  !  |     |     |  =  |  %  ||||| .   | N7  | N8  | N9  |  N- |                
+//| {   |  [  |  (  | N/  |  <  ||||| N,  | N4  | N5  | N6  |  N+ |  
+//| }   |  ]  |  )  | N*  |  >  ||||| N0  | N1  | N2  | N3  |N_RET| 
+//      |ESC12|DEL13|TAB16|     |||||     |ENT14|SPC11|BSPC15
 
 Navigation(13)
 [LALT SHFT TAB]=ast [LALT TAB]=at [CTRL SHFT TAB]=cst [CTRL TAB]=ct [CTRL GUI LFT]=cglf [CTRL GUI RGT]=cgrt
@@ -64,93 +78,54 @@ Navigation(13)
 //-----------------------------------------------------------------
 //|     |     | cst | ct  |     ||||| INS | HOM | UP  | END |aRGT |
 //|     | cbs | ast | at  | cd  ||||| DEL | LFT | DWN | RGT |aLFT |
-//|     |csbs |cglf |cgrt | csd ||||| GUI |PGDN |     |PGDN |KAPP |
-//      | DEL | ESC |     | TAB ||||| ENT |     | SPC |BSPC |
+//|     |csbs |cglf |cgrt | csd ||||| GUI |PGDN |PSCRN|PGDN |KAPP |
+//      |ESC12|DEL13|TAB16|     |||||     |ENT14|SPC11|BSPC15
 
 Function(14)
 //-----------------------------------------------------------------
 //| F1  | F2  | F3  | F4  | F5  ||||| F6  | F7  | F8  | F9  | F10 |
 //| F11 | F12 | F13 | F14 | F15 ||||| F16 | F17 | F18 | F19 | F20 |
 //| F21 | F22 | F23 |     |     |||||     |     |     |     |     |
-//      | DEL | ESC |     | TAB ||||| ENT |     | SPC |BSPC |
+//      |ESC12|DEL13|TAB16|     |||||     |ENT14|SPC11|BSPC15
 
 TechnMedia (15)
+MCAM [GUI SHFT O] MMIC [GUI SHFT A] MALL [GUI SHFT O]
+
 //-----------------------------------------------------------------
-//|BTCLR|     |OBLE |OUSB |OTOG |||||     |     |     |     |     |
-//| BT1 | BT2 | BT3 | BT4 | BT5 |||||     |     |     |     |     |
+//|BTCLR|     |OBLE |OUSB |OTOG |||||MCAM | VOL+|NEXT | BRI+|CAPS |
+//| BT1 | BT2 | BT3 | BT4 | BT5 |||||MMIC | MUTE|PL/PA| BRI-|SLCK |
+//| BTP | BTN |to(x)|to(0)|to(3)|||||MALL | VOL-|PREV | P/B |NLCK |
+//      |ESC12|DEL13|TAB16|     |||||     |ENT14|SPC11|BSPC15
+
+Mouse(16) 
+//-----------------------------------------------------------------
 //|     |     |     |     |     |||||     |     |     |     |     |
-//      | DEL | ESC |     | TAB ||||| ENT |     | SPC |BSPC |
-
-
-DEL ENTnav TABfn  BKSPmedia SPCsym
-
-				
-				
-				Frogpad(6)
-//----------------------------------------------------------------------------------    osm - przyciśnij i puść wciśniety do puki nie nacishnę następnego (stiky kwey )
-//|  ESC   |  F  |  D  |  N  |  I  |  G  |||||  G  |  I  |  N  |  D  |  F  |  ESC   |	OSL(layer) - momentarily activates layer until the next key is pressed
-/lt(10,bsp)|  S  |  T  |  H  |  E  |  O  |||||  O  |  E  |  H  |  T  |  S  |lt(10,bsp)  LT(layer, kc) - momentarily activates layer when held, and sends kc when tapped. 
-//|osmSHFT |  C  |  W  |  R  |  A  |  U  |||||  U  |  A  |  R  |  W  |  C  |osmSHFT |                          
-//               |osl 9|osl 8| SPC |lt11?||||| --- | SPC |osl 8|osl 9|
-	
-//---------------------------------------------------------------------------------- 
-//|  ENT   |  J  |  K  |  M  |  '  |  -  |||||  -  |  '  |  M  |  K  |  J  |  ENT   |   -- to jest realizowane przez combosy ale tylko na tej warstwie frog pad 
-/lt(10,bsp)|  Y  |  P  |  L  |  .  |  Q  |||||  Q  |  .  |  L  |  P  |  Y  |lt(10,bsp)   combo z SPC
-//|osmSHFT |  X  |  B  |  V  |  ,  |  Z  |||||  Z  |  ,  |  V  |  B  |  X  |osmSHFT |
-//               |     |     | -X- | --- ||||| --- | -X- |     |     |				
-				Frogint(7)
-//---------------------------------------------------------------------------------- 
-//|        |     |     |  Ń  |     |     |||||     |     |  Ń  |     |     |        |
-//|        |  Ś  |     |     |  Ę  |  Ó  |||||  Ó  |  Ę  |     |     |  Ś  |        |  
-//|        |  Ć  |     |     |  Ą  |     |||||     |  Ą  |     |     |  Ć  |        |        
-//               |     |     |     |     |||||     |     |     |     |
-//---------------------------------------------------------------------------------- 
-//|        |     |     |     |     |     |||||     |     |     |     |     |        |   combo z  tym czym s 
-//|        |     |     |  Ł  |     |     |||||     |     |  Ł  |     |     |        |  
-//|        |  Ź  |     |     |     |  Ż  |||||  Ż  |     |     |     |  Ź  |        |
-//               |     |     |     |     |||||     |     |     |     |
-				Frogsym(8)
-//---------------------------------------------------------------------------------- 
-//|  TAB   |  [  |  {  |  (  |  @  |  ^  |||||  ^  |  @  |  (  |  {  |  [  |  TAB   |
-//|   \    |  :  |  ;  |  ?  |  !  |  /  |||||  /  |  !  |  ?  |  ;  |  :  |   \    |  
-//|   ~    |  ]  |  }  |  )  |  &  |  *  |||||  *  |  &  |  )  |  }  |  ]  |   ~    |
-//               | --- | --- | --- | --- ||||| --- | --- | --- | --- |					
-				Frognum(9)
-//---------------------------------------------------------------------------------- 
-//|   =    |  6  |  7  |  8  |  9  |  .  |||||     |     |     |     |     |        |
-//|   +    |  1  |  2  |  3  |  4  |  5  |||||     |     |     |     |     |        |  
-//|   -    |  #  |  $  |  %  |  0  |  ,  |||||     |     |     |     |     |        |
-//               | --- | ---|osmGUI| --- ||||| --- |osmGUI|--- | --- |
-				Frogext(10)
-//---------------------------------------------------------------------------------- 
-//|        | BACK| HOM | UP  | END |FRWD |||||FRWD | END | UP  | HOM | BSPC|        |
-//|  -X-   |a TAB| LFT | DWN | RGT | DEL ||||| DEL | LFT | DWN | RGT |a TAB|  -X-   |  
-//|        | c Z | c X | c C | c V |osmALT|||osmALT| c V | c C | c X | c Z |        |
-//          |osmSHFT|osmCTRL|c BKSP| --- ||||| --- |c BKSP|osmCTRL|osmSHFT|
-
+//|     |     |     |     |     |||||     |     |     |     |     |
+//|     |     |     |     |     |||||     |     |     |     |     |
+//      |ESC12|DEL13|TAB16|     |||||     |ENT14|SPC11|BSPC15
 
 Letters 
-26 A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
-9  Ą Ć Ę Ł Ń Ó Ś Ź Ż
+ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+ Ą Ć Ę Ł Ń Ó Ś Ź Ż
 numbers
-10 1 2 3 4 5 6 7 8 9 0
-   ! @ # $ % ^ & * ( )
+ 1 2 3 4 5 6 7 8 9 0
+ ! @ # $ % ^ & * ( )
 symbols punctuaction 
-32 ! @ # $ % ^ & * ( ) = + - _ / ? \ | ; : ' " , < . > [ { ] } ` ~
+ ! @ # $ % ^ & * ( ) = + - _ / ? \ | ; : ' " , < . > [ { ] } ` ~
 control whitespace
-7  ESC ENT SPC TAB BSPC DEL INS
+ ESC ENT SPC TAB BSPC DEL INS
 spcial control
-4  [CTRL BSPC] [CTRL SHFT BSPC] [CTRL DEL] [CTRL SHFT DEL] 
+ [CTRL BSPC] [CTRL SHFT BSPC] [CTRL DEL] [CTRL SHFT DEL] 
 navigation
-10 HOM END PGUP PGDN UP DWN LFT RGT KAPP GUI(win)
+ HOM END PGUP PGDN UP DWN LFT RGT KAPP GUI(win)
 special navigation 
-6  [CTRL GUI LFT][CTRL GUI RGT][LALT SHFT TAB][LALT TAB][CTRL SHFT TAB][CTRL TAB]  
+ [CTRL GUI LFT][CTRL GUI RGT][LALT SHFT TAB][LALT TAB][CTRL SHFT TAB][CTRL TAB]  
 modifiers
-5  SHFT CTRL LALT RALT GUI
+ SHFT CTRL LALT RALT GUI
 special modifiers
-7  [CTRL LALT] [CTRL SHFT LALT] [CTRL GUI] [CTRL LALT GUI][CTRL SHFT LALT GUI] [LALT GUI] [LALT SHFT GUI]  
+ [CTRL LALT] [CTRL SHFT LALT] [CTRL GUI] [CTRL LALT GUI][CTRL SHFT LALT GUI] [LALT GUI] [LALT SHFT GUI]  
 locks 
-2 CAPS SLCK
+ CAPS SLCK
 f
 F1 - F24  (anroid  f1-f12)
 misc 

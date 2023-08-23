@@ -8,65 +8,310 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-// -------------------------------------DEFAULT--------------------------------------------
-//|  TAB    |  Q  |  W  |  E  |  R  |  T  |||||  Y  |  U  |  I  |  O  |  P  | BKSP    |
-//| CTRL    |  A  |  S  |  D  |  F  |  G  |||||  H  |  J  |  K  |  L  |  ;  |  '      |
-//|  SHFT   |  Z  |  X  |  C  |  V  |  B  |||||  N  |  M  |  ,  |  .  |  /  | ESC     |
-//                | GUI | LWR | SPC | SPC ||||| ENT | ENT | RSE |RALT |   
 
-//-----------------------------------------LWR--------------------------------------------
-//|  TAB    |  1  |  2  |  3  |  4  |  5  |||||  6  |  7  |  8  |  9  |  0  | BKSP   |
-//| BTCLR   | BT1 | BT2 | BT3 | BT4 | BT5 ||||| LFT | DWN | UP  | RGT |     |        |
-//| SHFT    |     |     |     |     |     |||||     |     |     |     |     |        |
-//                | GUI |     | SPC | SPC ||||| ENT | ENT |     | ALT |
+#define COL 0
+#define COI 1
+#define CIU 2
+#define QWE 3
+#define QWI 4
+#define QIU 5
+#define NUMBERANDSSYMBOL 11
+#define NUMPAD 12
+#define NAVGATION 13
+#define FUNCTION 14
+#define TECHMEDIA 15
+#define MOUSE 16 
 
-//-----------------------------------------RSE---------------------------------------------
-//|  TAB    |  !  |  @  |  #  |  $  |  %  |||||  ^  |  &  |  *  |  (  |  )     | BKSP   |
-//| CTRL    |     |     |     |     |     |||||  -  |  =  |  [  |  ]  |  \     |  `     |
-//| SHFT    |     |     |     |     |     |||||  _  |  +  |  {  |  }  | "|"    |  ~      |
-//                | GUI |     | SPC | SPC ||||| ENT | ENT |     | ALT |
+#define RAS(keycode) &kp RA(LS(keycode)) 
+//left
+#define KL_ASG(keycode) &orl LA(LS(LGUI)) keycode
+#define KL_CSA(keycode) &orl LC(LS(LALT)) keycode
+#define KL_CA(keycode) &orl LC(LA) keycode
+#define KL_AS(keycode) &orl LA(LSHFT) keycode
+#define KL_AG(keycode) &orl LA(LGUI) keycode
+#define KL_K(keycode) &hrl K_APP keycode
+#define KL_S(keycode) &hrl LSHFT keycode
+#define KL_C(keycode) &hrl LCTRL keycode
+#define KL_NC &krhrl LCTRL 0
+#define KL_A(keycode) &hrl LALT keycode
+#define KL_NA &cwrhrl LALT 0
+#define KL_G(keycode) &hrl LGUI keycode
+#define KL_CAG(keycode) &orl LC(LA(LGUI)) keycode
+#define KL_CSAG(keycode) &orl LC(LS(LA(LGUI))) keycode
+
+
+#define KL_CG(keycode) &hrl LC(LGUI) keycode
+//right
+#define KR_AG(keycode) &orr LA(RGUI) keycode
+#define KR_AS(keycode) &orr LA(RSHFT) keycode
+#define KR_CA(keycode) &orr RC(LALT) keycode
+#define KR_CSA(keycode) &orr RC(RS(LALT)) keycode
+#define KR_ASG(keycode) &orr RA(RS(RGUI)) keycode
+#define KR_G(keycode) &hrr RGUI keycode
+#define KR_A(keycode) &hrr LALT keycode
+#define KR_C(keycode) &hrr RCTRL keycode
+#define KR_S(keycode) &hrr RSHFT keycode
+#define KR_K(keycode) &hrr K_APP keycode
+#define KR_CG(keycode) &orr RC(RGUI) keycode
+
+
+#define KR_CSAG(keycode) &orr RC(RS(LA(RGUI))) keycode
+#define KR_CAG(keycode) &orr RC(LA(RGUI)) keycode
+//left thumb
+#define ML_ESC &tmh NUMPAD ESCAPE
+#define ML_DEL &tmh NAVGATION DELETE
+#define ML_TAB &tmh MOUSE TAB
+//right thumb
+#define ML_ENT &tmh FUNCTION ENTER
+#define ML_SPC &tmh NUMBERANDSSYMBOL SPACE
+#define ML_BSPC &tmh TECHMEDIA BACKSPACE
+//moves
+#define M1_BTB &kp LC(LS(TAB))
+#define M1_TAB &kp LC(TAB)
+#define M2_BTB &kp LA(LS(TAB))
+#define M2_TAB &kp LA(TAB)
+#define M3_BTB &kp LC(LG(LEFT))
+#define M3_TAB &kp LC(LG(RIGHT))
+//dels
+#define D_BSPW &kp LC(BSPC)
+#define D_BSPBL &kp LC(LS(BSPC))
+#define D_DELW &kp LC(LS(DEL))
+#define D_DELEL &kp LC(LS(DEL))
+//powertoys
+#define PT_CAM &kp RG(RS(O)) 
+#define PT_MIC &kp RG(RS(A))
+#define PT_ALL &kp RG(RS(Q))
+ 
+&caps_word {
+    continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>;
+};
+
+
 / {
+	behaviors {
+        
+		prog_caps: behavior_prog_caps_word {
+				compatible = "zmk,behavior-caps-word";
+				label = "PROG_CAPS";
+				#binding-cells = <0>;
+				continue-list = <UNDERSCORE>;
+		};
+		hrl: left_hand_home_row_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LEFT_POSITIONAL_HOME_ROW_HOLD_TAP";
+            #binding-cells = <2>;
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <100>;
+            quick-tap-ms = <200>;
+			global-quick-tap;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <6 7 8 9 10 13 14 15 16 17 18 19 20 21 22 30 31 32 33 34 41 42 43>;
+        };
+		krhrl: left_hand_home_row_hold_key_repeat {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LEFT_POSITIONAL_HOME_ROW_HOLD_KEY_REPEAT";
+            #binding-cells = <2>;
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <100>;
+            quick-tap-ms = <200>;
+			global-quick-tap;
+            bindings = <&kp>, <&key_repeat>;
+            hold-trigger-key-positions = <6 7 8 9 10 13 14 15 16 17 18 19 20 21 22 30 31 32 33 34 41 42 43>;
+		};
+        cwrhrl: left_hand_home_row_hold_caps_word {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LEFT_POSITIONAL_HOME_ROW_HOLD_CAPS_WORD";
+            #binding-cells = <2>;
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <100>;
+            quick-tap-ms = <200>;
+			global-quick-tap;
+            bindings = <&kp>, <&caps_word>;
+            hold-trigger-key-positions = <6 7 8 9 10 18 19 20 21 22 30 31 32 33 34 41 42 43>;
+		};		
+		orl: left_hand_other_row_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LEFT_POSITIONAL_HOLD_TAP";
+            #binding-cells = <2>;
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <100>;
+            quick-tap-ms = <200>;
+			global-quick-tap;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <6 7 8 9 10 18 19 20 21 22 30 31 32 33 34 41 42 43>;
+        };
+		mlh: left_hand_momentary_leyer_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LEFT_MOMENTARY_LEYER_HOLD_TAP";
+            #binding-cells = <2>;
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <100>;
+            quick-tap-ms = <200>;
+			global-quick-tap;
+            bindings = <&mo>, <&kp>;
+            hold-trigger-key-positions = <6 7 8 9 10 18 19 20 21 22 30 31 32 33 34 41 42 43>;
+        };
+		hrr: right_hand_home_row_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RIGHT_POSITIONAL_HOME_ROW_HOLD_TAP";
+            #binding-cells = <2>;
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <100>;
+            quick-tap-ms = <200>;
+			global-quick-tap;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <1 2 3 4 5 13 14 15 16 17 18 19 20 21 22 25 26 27 28 29 36 37 38>;
+        };
+		orr: right_hand_home_row_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RIGHT_POSITIONAL_HOLD_TAP";
+            #binding-cells = <2>;
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <100>;
+            quick-tap-ms = <200>;
+			global-quick-tap;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <1 2 3 4 5 13 14 15 16 17 25 26 27 28 29 36 37 38>;
+        };
+		mrh: right_hand_momentary_leyer_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RIGHT_MOMENTARY_LEYER_HOLD_TAP";
+            #binding-cells = <2>;
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <100>;
+            quick-tap-ms = <200>;
+			global-quick-tap;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <1 2 3 4 5 13 14 15 16 17 25 26 27 28 29 36 37 38>;
+        };
+		tmh: thumb_row_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "THUMB_MOMENTARY_HOLD_TAP";
+            #binding-cells = <2>;
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <100>;
+            quick-tap-ms = <200>;
+			global-quick-tap;
+            bindings = <&mo>, <&kp>;
+        };
+		
+	};
+
         keymap {
                 compatible = "zmk,keymap";
-
-                default_layer {
+                default_colemak { // COL 0
                         bindings = <
-// -----------------------------------------------------------------------------------------
-//|  TAB    |  Q  |  W  |  E  |  R  |  T  |||||  Y  |  U   |  I  |  O  |  P     | BKSP    |
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T     &kp Y &kp U  &kp I &kp O &kp P    &kp BSPC
-//| CTRL    |  A  |  S  |  D  |  F  |  G  |||||  H  |  J   |  K  |  L  |  ;     |  '      |
-   &kp LCTRL &kp A &kp S &kp D &kp F &kp G     &kp H &kp J  &kp K &kp L &kp SEMI &kp SQT
-//|  SHFT   |  Z  |  X  |  C  |  V  |  B  |||||  N  |  M   |  ,  |  .  |  /     | ESC     |
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B     &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-//   | GUI    | LWR | SPC     | SPC       ||||| ENT   | ENT    | RSE | ALT    |   
-      &kp LGUI &mo 1 &kp SPACE &kp SPACE       &kp RET  &kp RET &mo 2 &kp RALT
+//----|--------------|-------------------|--------------|----------------|----------------||----------------|---------------|----------------|------------------|----------------|-------						
+&none    KL_ASG(Q)     KL_CSA(W)           KL_CA(F)       KL_AS(P)         KL_AG(B)          KR_AG(J)         KR_AS(L)        KR_CA(U)         KR_CSA(Y)          KR_ASG(SEMI)     &none
+&none    KL_K(A)       KL_S(R)             KL_C(S)        KL_A(T)          KL_G(G)           KR_G(M)          KR_A(N)         KR_C(E)          KR_S(I)            KR_K(O)          &none
+&none    KL_CAG(Z)     KL_CSAG(X)          &mlh CIU C     &mlh COI D       KL_CG(V)          KR_CG(K)         &mrh COI H      &mrh CIU COMMA   KR_CSAG(PERIOD)    KR_CAG(SLASH)    &none
+                       ML_ESC              ML_DEL         ML_TAB           &none             &none            ML_ENT          ML_SPC           ML_BSPC
                         >;
                 };
-                lower_layer {
+                colemak_international { // COI 1
                         bindings = <
-//-----------------------------------------------------------------------------------------
-//|  TAB     |  1         |  2         |  3         |  4         |  5         |||||  6     |  7     |  8   |  9      |  0   | BKSP   |
-   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5           &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-//| BTCLR    | BT1        | BT2        | BT3        | BT4        | BT5        ||||| LFT    | DWN    |  UP  | RGT     |      |        |
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4     &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-//| SHFT     |            |            |            |            |            |||||        |        |      |         |      |        |
-   &kp LSHFT  &trans       &trans       &trans       &trans       &trans           &trans   &trans   &trans &trans    &trans &trans
-//                                     | GUI    |       |      SPC |      SPC ||||| ENT   | ENT   |      | ALT    |
-                                        &kp LGUI &trans  &kp SPACE  &kp SPACE      &kp RET &kp RET &trans &kp RALT
+//----|--------------|-------------------|--------------|----------------|----------------||----------------|---------------|----------------|------------------|----------------|-------
+&none    &none         &none               &none          &none            &none             &none            &kp RA(L)       &none            &none              &none            &none
+&none    &kp RA(A)     &none               &kp RA(S)      &none            &to TECHMEDIA     &to TECHMEDIA    &kp RA(N)       &kp RA(E)        &none              &kp RA(O)        &none
+&none    &kp RA(Z)     &kp RA(X)           &kp RA(C)      &none            &none             &none            &none           &none            &none              &kp APOS         &none
+                       ML_ESC              ML_DEL         ML_TAB           &none             &none            ML_ENT          ML_SPC           ML_BSPC
                         >;
                 };
-
-                raise_layer {
+                colemak_international_upper { // CIU 2
                         bindings = <
-//-----------------------------------------------------------------------------------------
-//|  TAB    |  !     |  @   |  #     |  $     |  %      |||||  ^      |  &      |  *            |  (     |  )     | BKSP   |
-   &kp TAB   &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT     &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
-//| CTRL    |        |      |        |        |         |||||  -      |  =      |  [            |  ]     |  \     |  `     |
-   &kp LCTRL &trans   &trans &trans   &trans   &trans        &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
-//| SHFT    |        |      |        |        |         |||||  _      |  +      |  {            |  }     | "|"    |  ~      |
-   &kp LSHFT &trans   &trans &trans   &trans   &trans        &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
-//                 | GUI    |       | SPC     | SPC     ||||| ENT   | ENT   |      | ALT       |
-                    &kp LGUI &trans  &kp SPACE &kp SPACE     &kp RET &kp RET &trans    &kp RALT
+//----|--------------|-------------------|--------------|----------------|----------------||----------------|---------------|----------------|------------------|----------------|-------
+&none    &none         &none               &none          &none            &none             &none            RAS(L)          &none            &none              &none            &none
+&none    RAS(A)        &none               RAS(S)         &none            &to TECHMEDIA     &to TECHMEDIA    RAS(N)          RAS(E)           &none              RAS(O)           &none
+&none    RAS(Z)        RAS(X)              RAS(C)         &none            &none             &none            &none           &none            &none              &kp DQT          &none
+                       ML_ESC              ML_DEL         ML_TAB           &none             &none            ML_ENT          ML_SPC           ML_BSPC
+                        >;
+                };
+                qwerty {// QWE 3
+                        bindings = <
+//----|--------------|-------------------|--------------|----------------|----------------||----------------|---------------|----------------|------------------|----------------|-------						
+&none    KL_ASG(Q)     KL_CSA(W)           KL_CA(E)       KL_AS(R)         KL_AG(T)          KR_AG(Y)         KR_AS(U)        KR_CA(I)         KR_CSA(O)          KR_ASG(P)        &none
+&none    KL_K(A)       KL_S(S)             KL_C(D)        KL_A(F)          KL_G(G)           KR_G(H)          KR_A(J)         KR_C(E)          KR_S(I)            KR_K(SEMI)       &none
+&none    KL_CAG(Z)     KL_CSAG(X)          &mlh QIU C     &mlh QWI V       KL_CG(B)          KR_CG(N)         &mrh COI M      &mrh CIU COMMA   KR_CSAG(PERIOD)    KR_CAG(SLASH)    &none
+                       ML_ESC              ML_DEL         ML_TAB           &none             &none            ML_ENT          ML_SPC           ML_BSPC
+                        >;
+                };
+                qwerty_international { // QWI 4
+                        bindings = <
+//----|--------------|-------------------|--------------|----------------|----------------||----------------|---------------|----------------|------------------|----------------|-------
+&none    &none         &none               &kp RA(E)      &none            &none             &none            &none           &none            &kp RA(O)          &none            &none
+&none    &kp RA(A)     &kp RA(S)           &none          &none            &to TECHMEDIA     &to TECHMEDIA    &none           &none            &kp RA(L)          &none            &none
+&none    &kp RA(Z)     &kp RA(X)           &kp RA(C)      &none            &none             &kp RA(N)        &none           &none            &none              &kp APOS         &none
+                       ML_ESC              ML_DEL         ML_TAB           &none             &none            ML_ENT          ML_SPC           ML_BSPC
+                        >;
+                };
+                qwerty_international_upper {// QIU 5
+                        bindings = <
+
+//----|--------------|-------------------|--------------|----------------|----------------||----------------|---------------|----------------|------------------|----------------|-------
+&none    &none         &none               RAS(E)         &none            &none             &none            &none           &none            RAS(O)             &none            &none
+&none    RAS(A)        RAS(S)              &none          &none            &to TECHMEDIA     &to TECHMEDIA    &none           &none            RAS(L)             &none            &none
+&none    RAS(Z)        RAS(X)              RAS(C)         &none            &none             RAS(N)           &none           &none            &none              &kp DQT          &none
+                       ML_ESC              ML_DEL         ML_TAB           &none             &none            ML_ENT          ML_SPC           ML_BSPC
+                        >;
+                };
+                number_and_symbol { // NUMBERANDSSYMBOL 11
+                        bindings = <
+//----|--------------|-------------------|--------------|----------------|----------------||----------------|---------------|----------------|------------------|----------------|-------						
+&none    KL_ASG(N1)    KL_CSA(N2)          KL_CA(N3)      KL_AS(N4)        KL_AG(N5)         KR_AG(N6)        KR_AS(N7)       KR_CA(N8)        KR_CSA(N9)         KR_ASG(N0)       &none
+&none    KL_K(GRAVE)   &kp LSHFT           KL_NC          KL_NA            KL_G(0)           KR_G(MINUS)      KR_A(EQUAL)     KR_C(LBKT)       KR_S(RBKT)         KR_K(BSLH)       &none
+&none    KL_CAG(0)     KL_CSAG(0)          &none          &prog_caps       KL_CG(0)          KR_CG(SEMI)      &kp APOS        &kp COMMA        KR_CSAG(PERIOD)    KR_CAG(SLASH)    &none
+                       ML_ESC              ML_DEL         ML_TAB           &none             &none            ML_ENT          ML_SPC           ML_BSPC
+                        >;
+                };
+                numpad { // NUMPAD 12
+                        bindings = <
+//----|--------------|-------------------|--------------|----------------|----------------||----------------|---------------|----------------|------------------|----------------|-------						
+&none    &kp EXCL      &none               &none          &kp KP_EQUAL     &kp PRCNT         &kp KP_DOT       &kp KP_N7       &kp KP_N8        &kp KP_N9          &kp KP_MINUS     &none
+&none    &kp LBRC      &kp LBRT            &kp KP_LPAR    &kp KP_DIVIDE    &kp LT            &kp KP_COMMA     &kp KP_N4       &kp KP_N5        &kp KP_N6          &kp KP_PLUS      &none
+&none    &kp RBRC      &kp RBRT            &kp KP_RPAR    &kp KP_MULTIPLY  &kp GT            &kp KP_N0        &kp KP_N1       &kp KP_N2        &kp KP_N3          &kp KP_ENTER     &none
+                       ML_ESC              ML_DEL         ML_TAB           &none             &none            ML_ENT          ML_SPC           ML_BSPC
+                        >;
+                };
+				navigation { // NAVGATION 13
+                        bindings = <
+//----|--------------|-------------------|--------------|----------------|----------------||----------------|---------------|----------------|------------------|----------------|-------						
+&none    KL_ASG(0)     KL_CSA(0)           KL_CA(M1_BTB)  KL_AS(M1_TAB)    KL_AG(0)          &kp INS          &kp HOME        &kp UP           &kp END            &kp LA(RIGHT)    &none
+&none    KL_K(0)       KL_S(D_BSPW)        KL_C(M2_BTB)   KL_A(M2_TAB)     KL_G(D_DELW)      &kp DEL          &kp LEFT        &kp DOWN         &kp RIGHT          &kp LA(LEFT)     &none
+&none    KL_CAG(0)     KL_CSAG(D_BSPBL)    M3_BTB         M3_TAB           KL_CG(D_DELEL)    &kp RGUI         &kp PG_DOWN     &kp PSCRN        &kp PG_UP          &kp K_APP        &none
+                       ML_ESC              ML_DEL         ML_TAB           &none             &none            ML_ENT          ML_SPC           ML_BSPC
+                        >;
+                };
+				function { // FUNCTION 14
+                        bindings = <
+//----|--------------|-------------------|--------------|----------------|----------------||----------------|---------------|----------------|------------------|----------------|-------						
+&none    KL_ASG(F1)    KL_CSA(F2)          KL_CA(F3)      KL_AS(F4)        KL_AG(F5)         KR_AG(F6)        KR_AS(F7)       KR_CA(F8)        KR_CSA(F9)         KR_ASG(F10)      &none
+&none    KL_K(F11)     KL_S(F12)           KL_C(F13)      KL_A(F14)        KL_G(F15)         KR_G(F16)        KR_A(F17)       KR_C(F18)        KR_S(F19)          KR_K(F20)        &none
+&none    KL_CAG(F21)   KL_CSAG(F22)        &kp F23        &none            KL_CG(0)          KR_CG(0)         &none           &none            KR_CSAG(0)         KR_CAG(0)        &none
+                       ML_ESC              ML_DEL         ML_TAB           &none             &none            ML_ENT          ML_SPC           ML_BSPC
+                        >;
+                };
+//-----------------------------------------------------------------
+//|BTCLR|     |OBLE |OUSB |OTOG |||||MCAM | VOL+|NEXT | BRI+|CAPS |
+//| BT1 | BT2 | BT3 | BT4 | BT5 |||||MMIC | MUTE|PL/PA| BRI-|SLCK |
+//| BTP | BTN |to(x)|to(0)|to(3)|||||MALL | VOL-|PREV | P/B |NLCK |
+//      |ESC12|DEL13|TAB16|     |||||     |ENT14|SPC11|BSPC15
+
+                tech_and_media { // TECHMEDIA 15
+                        bindings = <
+//----|--------------|-------------------|--------------|----------------|----------------||----------------|---------------|----------------|------------------|----------------|-------						
+&none    &bt BT_CLR    &none               &out OUT_BLE   &out OUT_USB     &out OUT_TOG      PT_CAM           &kp C_VOL_UP    &kp C_NEXT       &kp C_BRI_UP       &kp CAPS         &none
+&none    &bt BT_SEL 0  &bt BT_SEL 1        &bt BT_SEL 2   &bt BT_SEL 3     &bt BT_SEL 4      PT_MIC           &kp C_MUTE      &kp C_PP         &kp C_BRI_DN       &kp SLCK         &none
+&none    &bt BT_PRV    &bt BT_NXT          &none          &to COL          &to QWE           PT_ALL           &kp C_VOL_DN    &kp C_PREV       &kp PAUSE_BREAK    &kp KP_NUM       &none
+                       ML_ESC              ML_DEL         ML_TAB           &none             &none            ML_ENT          ML_SPC           ML_BSPC
+                        >;
+                };
+                mouse { // MOUSE 16 
+                        bindings = <
+//----|--------------|-------------------|--------------|----------------|----------------||----------------|---------------|----------------|------------------|----------------|-------						
+&none    &none         &none               &none          &none            &none             &none            &none           &none            &none              &none            &none
+&none    &none         &none               &none          &none            &none             &none            &none           &none            &none              &none            &none
+&none    &none         &none               &none          &none            &none             &none            &none           &none            &none              &none            &none
+                       ML_ESC              ML_DEL         ML_TAB           &none             &none            ML_ENT          ML_SPC           ML_BSPC
                         >;
                 };
         };
