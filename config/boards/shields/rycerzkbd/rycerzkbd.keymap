@@ -15,12 +15,12 @@
 #define QWE 3
 #define QWI 4
 #define QIU 5
-#define NUMBERANDSSYMBOL 11
-#define NUMPAD 12
-#define NAVGATION 13
-#define FUNCTION 14
-#define TECHMEDIA 15
-#define MOUSE 16 
+#define NUMBERANDSSYMBOL 6
+#define NUMPAD 7
+#define NAVGATION 8
+#define FUNCTION 9
+#define TECHMEDIA 10
+#define MOUSE 12
 
 #define RAS(keycode) &kp RA(LS(keycode)) 
 //left
