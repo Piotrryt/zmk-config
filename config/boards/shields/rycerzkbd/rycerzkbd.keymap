@@ -162,7 +162,7 @@
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <1 2 3 4 5 13 14 15 16 17 18 19 20 21 22 25 26 27 28 29 36 37 38>;
         };
-		orr: right_hand_home_row_hold_tap {
+		orr: right_hand_other_row_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "RIGHT_POSITIONAL_HOLD_TAP";
             #binding-cells = <2>;
