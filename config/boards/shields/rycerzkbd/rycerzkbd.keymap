@@ -89,8 +89,8 @@
                label = "LEFT_POSITIONAL_HOME_ROW_HOLD_TAP";
                #binding-cells = <2>;
                flavor = "tap-unless-interrupted";
-               tapping-term-ms = <100>;
-               quick-tap-ms = <200>;   
+               tapping-term-ms = <300>;
+               quick-tap-ms = <0>;   
                global-quick-tap;
                bindings = <&kp>, <&kp>;
                hold-trigger-key-positions = <6 7 8 9 10 13 14 15 16 17 18 19 20 21 22 30 31 32 33 34 41 42 43>;
@@ -100,8 +100,8 @@
                label = "LEFT_POSITIONAL_HOLD_TAP";
                #binding-cells = <2>;
                flavor = "tap-unless-interrupted";
-               tapping-term-ms = <100>;
-               quick-tap-ms = <200>;
+               tapping-term-ms = <300>;
+               quick-tap-ms = <0>;
                global-quick-tap;
                bindings = <&kp>, <&kp>;
                hold-trigger-key-positions = <6 7 8 9 10 18 19 20 21 22 30 31 32 33 34 41 42 43>;
@@ -111,8 +111,8 @@
                label = "LEFT_POSITIONAL_HOME_ROW_HOLD_KEY_REPEAT";
                #binding-cells = <2>;
                flavor = "tap-unless-interrupted";
-               tapping-term-ms = <100>;
-               quick-tap-ms = <200>;
+               tapping-term-ms = <300>;
+               quick-tap-ms = <0>;
                global-quick-tap;
                bindings = <&kp>, <&key_repeat>;
                hold-trigger-key-positions = <6 7 8 9 10 13 14 15 16 17 18 19 20 21 22 30 31 32 33 34 41 42 43>;
@@ -122,8 +122,8 @@
                label = "LEFT_POSITIONAL_HOME_ROW_HOLD_CAPS_WORD";
                #binding-cells = <2>;
                flavor = "tap-unless-interrupted";
-               tapping-term-ms = <100>;
-               quick-tap-ms = <200>;
+               tapping-term-ms = <300>;
+               quick-tap-ms = <0>;
                global-quick-tap;
                bindings = <&kp>, <&caps_word>;
                hold-trigger-key-positions = <6 7 8 9 10 18 19 20 21 22 30 31 32 33 34 41 42 43>;
@@ -133,8 +133,8 @@
                label = "RIGHT_POSITIONAL_HOME_ROW_HOLD_TAP";
                #binding-cells = <2>;
                flavor = "tap-unless-interrupted";
-               tapping-term-ms = <100>;
-               quick-tap-ms = <200>;
+               tapping-term-ms = <300>;
+               quick-tap-ms = <0>;
                global-quick-tap;
                bindings = <&kp>, <&kp>;
                hold-trigger-key-positions = <1 2 3 4 5 13 14 15 16 17 18 19 20 21 22 25 26 27 28 29 36 37 38>;
@@ -144,8 +144,8 @@
                label = "RIGHT_POSITIONAL_HOLD_TAP";
                #binding-cells = <2>;
                flavor = "tap-unless-interrupted";
-               tapping-term-ms = <100>;
-               quick-tap-ms = <200>;
+               tapping-term-ms = <300>;
+               quick-tap-ms = <0>;
                global-quick-tap;
                bindings = <&kp>, <&kp>;
                hold-trigger-key-positions = <1 2 3 4 5 13 14 15 16 17 25 26 27 28 29 36 37 38>;
@@ -155,8 +155,8 @@
                label = "LEFT_MOMENTARY_LEYER_HOLD_TAP";
                #binding-cells = <2>;
                flavor = "tap-unless-interrupted";
-               tapping-term-ms = <100>;
-               quick-tap-ms = <200>;
+               tapping-term-ms = <300>;
+               quick-tap-ms = <0>;
                global-quick-tap;
                hold-trigger-key-positions = <6 7 8 9 10 18 19 20 21 22 30 31 32 33 34 41 42 43>;
                bindings = <&mo>, <&kp>;
@@ -166,8 +166,8 @@
                label = "RIGHT_MOMENTARY_LEYER_HOLD_TAP";
                #binding-cells = <2>;
                flavor = "tap-unless-interrupted";
-               tapping-term-ms = <100>;
-               quick-tap-ms = <200>;
+               tapping-term-ms = <300>;
+               quick-tap-ms = <0>;
                global-quick-tap;
                hold-trigger-key-positions = <1 2 3 4 5 13 14 15 16 17 25 26 27 28 29 36 37 38>;
                bindings = <&mo>, <&kp>;
@@ -177,8 +177,8 @@
                label = "THUMB_MOMENTARY_HOLD_TAP";
                #binding-cells = <2>;
                flavor = "tap-unless-interrupted";
-               tapping-term-ms = <100>;
-               quick-tap-ms = <200>;
+               tapping-term-ms = <300>;
+               quick-tap-ms = <0>;
                global-quick-tap;
                bindings = <&mo>, <&kp>;
            };
