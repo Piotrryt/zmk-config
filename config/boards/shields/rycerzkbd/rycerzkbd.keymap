@@ -59,13 +59,13 @@
 #define KR_CSAG(keycode) &orr RC(RS(LA(RGUI))) keycode
 #define KR_CAG(keycode) &orr RC(LA(RGUI)) keycode
 //left thumb
-#define ML_ESC &tmh NUMPAD ESCAPE
-#define ML_DEL &tmh NAVGATION DELETE
-#define ML_TAB &tmh MOUSE TAB
+#define ML_ESC &tmh 7 ESCAPE //NUMPAD
+#define ML_DEL &tmh 8 DELETE //NAVGATION
+#define ML_TAB &tmh 11 TAB //MOUSE
 //right thumb
-#define ML_ENT &tmh FUNCTION ENTER
-#define ML_SPC &tmh NUMBERANDSSYMBOL SPACE
-#define ML_BSPC &tmh TECHMEDIA BACKSPACE
+#define ML_ENT &tmh 9 ENTER //FUNCTION
+#define ML_SPC &tmh 6 SPACE //NUMBERANDSSYMBOL
+#define ML_BSPC &tmh 10 BACKSPACE //TECHMEDIA
 //moves
 #define M1_BTB &kp LC(LS(TAB))
 #define M1_TAB &kp LC(TAB)
