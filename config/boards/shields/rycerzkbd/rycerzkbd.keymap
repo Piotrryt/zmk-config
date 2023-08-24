@@ -150,7 +150,18 @@
                bindings = <&kp>, <&kp>;
                hold-trigger-key-positions = <1 2 3 4 5 13 14 15 16 17 25 26 27 28 29 36 37 38>;
            };
-           imh: international_momentary_leyer_hold_tap {
+           lih: lef_tinternational_momentary_leyer_hold_tap {
+               compatible = "zmk,behavior-hold-tap";
+               label = "LEFT_MOMENTARY_LEYER_HOLD_TAP";
+               #binding-cells = <2>;
+               flavor = "tap-unless-interrupted";
+               tapping-term-ms = <100>;
+               quick-tap-ms = <200>;
+               global-quick-tap;
+               hold-trigger-key-positions = <6 7 8 9 10 18 19 20 21 22 30 31 32 33 34 41 42 43>;
+               bindings = <&mo>, <&kp>;
+           };
+          rih: right_international_momentary_leyer_hold_tap {
                compatible = "zmk,behavior-hold-tap";
                label = "RIGHT_MOMENTARY_LEYER_HOLD_TAP";
                #binding-cells = <2>;
@@ -158,6 +169,7 @@
                tapping-term-ms = <100>;
                quick-tap-ms = <200>;
                global-quick-tap;
+               hold-trigger-key-positions = <1 2 3 4 5 13 14 15 16 17 25 26 27 28 29 36 37 38>;
                bindings = <&mo>, <&kp>;
            };
            tmh: thumb_row_hold_tap {
@@ -180,7 +192,7 @@
 //----|--------------|-------------------|--------------|----------------|----------------||----------------|---------------|----------------|------------------|----------------|-------						
 &none    KL_ASG(Q)     KL_CSA(W)           KL_CA(F)       KL_AS(P)         KL_AG(B)          KR_AG(J)         KR_AS(L)        KR_CA(U)         KR_CSA(Y)          KR_ASG(SEMI)     &none
 &none    KL_K(A)       KL_S(R)             KL_C(S)        KL_A(T)          KL_G(G)           KR_G(M)          KR_A(N)         KR_C(E)          KR_S(I)            KR_K(O)          &none
-&none    KL_CAG(Z)     KL_CSAG(X)          &imh CIU C     &imh COI D       KL_CG(V)          KR_CG(K)         &imh COI H      &imh CIU COMMA   KR_CSAG(PERIOD)    KR_CAG(SLASH)    &none
+&none    KL_CAG(Z)     KL_CSAG(X)          &lih CIU C     &lih COI D       KL_CG(V)          KR_CG(K)         &rih COI H      &rih CIU COMMA   KR_CSAG(PERIOD)    KR_CAG(SLASH)    &none
                        ML_ESC              ML_DEL         ML_TAB           &none             &none            ML_ENT          ML_SPC           ML_BSPC
                         >;
                 };
@@ -207,7 +219,7 @@
 //----|--------------|-------------------|--------------|----------------|----------------||----------------|---------------|----------------|------------------|----------------|-------						
 &none    KL_ASG(Q)     KL_CSA(W)           KL_CA(E)       KL_AS(R)         KL_AG(T)          KR_AG(Y)         KR_AS(U)        KR_CA(I)         KR_CSA(O)          KR_ASG(P)        &none
 &none    KL_K(A)       KL_S(S)             KL_C(D)        KL_A(F)          KL_G(G)           KR_G(H)          KR_A(J)         KR_C(E)          KR_S(I)            KR_K(SEMI)       &none
-&none    KL_CAG(Z)     KL_CSAG(X)          &imh QIU C     &imh QWI V       KL_CG(B)          KR_CG(N)         &imh QWI M      &imh QIU COMMA   KR_CSAG(PERIOD)    KR_CAG(SLASH)    &none
+&none    KL_CAG(Z)     KL_CSAG(X)          &lih QIU C     &lih QWI V       KL_CG(B)          KR_CG(N)         &rih QWI M      &rih QIU COMMA   KR_CSAG(PERIOD)    KR_CAG(SLASH)    &none
                        ML_ESC              ML_DEL         ML_TAB           &none             &none            ML_ENT          ML_SPC           ML_BSPC
                         >;
                 };
@@ -253,8 +265,8 @@
 //----|--------------|----------------------|-------------------|----------------|------------------||----------------|---------------|----------------|------------------|----------------|-------						
 &none    KL_ASG(0)     KL_CSA(0)             KL_CA(LC(LS(TAB)))  KL_AS(LC(TAB))    KL_AG(0)            &kp INS          &kp HOME        &kp UP           &kp END            &kp LA(RIGHT)    &none
 &none    KL_K(0)       KL_S(LC(BSPC))        KL_C(LA(LS(TAB)))   KL_A(LA(TAB))     KL_G(LC(LS(DEL)))   &kp DEL          &kp LEFT        &kp DOWN         &kp RIGHT          &kp LA(LEFT)     &none
-&none    KL_CAG(0)     KL_CSAG(LC(LS(BSPC))) LC(LG(LEFT))        LC(LG(RIGHT))     KL_CG(LC(LS(DEL)))  &kp RGUI         &kp PG_DN       &kp PSCRN        &kp PG_UP          &kp K_APP        &none
-                       ML_ESC                ML_DEL              ML_TAB           &none                &none            ML_ENT          ML_SPC           ML_BSPC
+&none    KL_CAG(0)     KL_CSAG(LC(LS(BSPC))) &kp LC(LG(LEFT))    &kp LC(LG(RIGHT)) KL_CG(LC(LS(DEL)))  &kp RGUI         &kp PG_DN       &kp PSCRN        &kp PG_UP          &kp K_APP        &none
+                       ML_ESC                ML_DEL              ML_TAB            &none               &none            ML_ENT          ML_SPC           ML_BSPC
                         >;
                 };
 		function { // FUNCTION 14
