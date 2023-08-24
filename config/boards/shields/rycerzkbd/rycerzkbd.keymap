@@ -202,8 +202,9 @@
                 default_colemak { // COL 0
                         bindings = <
 //----|--------------|-------------------|--------------|----------------|----------------||----------------|---------------|----------------|------------------|----------------|-------						
-&none    KL_ASG(Q)     KL_CSA(W)           KL_CA(F)       KL_AS(P)         KL_AG(B)          KR_AG(J)         KR_AS(L)        KR_CA(U)         KR_CSA(Y)          KR_ASG(SEMI)     &none
-//&none    KL_ASG(Q)     &none               &none          &none            &none             &none            &none           &none            &none              &none            &none
+//&none    KL_ASG(Q)     KL_CSA(W)           KL_CA(F)       KL_AS(P)         KL_AG(B)          KR_AG(J)         KR_AS(L)        KR_CA(U)         KR_CSA(Y)          KR_ASG(SEMI)     &none
+&none    KL_ASG(Q)     KL_CSA(W)           KL_CA(F)       KL_AS(P)         KL_AG(B)          &none            &none           &none            &none              &none            &none
+
 //&none    KL_K(A)       KL_S(R)             KL_C(S)        KL_A(T)          KL_G(G)           KR_G(M)          KR_A(N)         KR_C(E)          KR_S(I)            KR_K(O)          &none
 &none    &none         &none               &none          &none            &none             &none            &none           &none            &none              &none            &none
 //&none    KL_CAG(Z)     KL_CSAG(X)          &mlh CIU C     &mlh COI D       KL_CG(V)          KR_CG(K)         &mrh COI H      &mrh CIU COMMA   KR_CSAG(PERIOD)    KR_CAG(SLASH)    &none
@@ -276,7 +277,7 @@
                        ML_ESC              ML_DEL         ML_TAB           &none             &none            ML_ENT          ML_SPC           ML_BSPC
                         >;
                 };
-				navigation { // NAVGATION 13
+		navigation { // NAVGATION 13
                         bindings = <
 //----|--------------|-------------------|--------------|----------------|----------------||----------------|---------------|----------------|------------------|----------------|-------						
 &none    KL_ASG(0)     KL_CSA(0)           KL_CA(M1_BTB)  KL_AS(M1_TAB)    KL_AG(0)          &kp INS          &kp HOME        &kp UP           &kp END            &kp LA(RIGHT)    &none
@@ -285,7 +286,7 @@
                        ML_ESC              ML_DEL         ML_TAB           &none             &none            ML_ENT          ML_SPC           ML_BSPC
                         >;
                 };
-				function { // FUNCTION 14
+		function { // FUNCTION 14
                         bindings = <
 //----|--------------|-------------------|--------------|----------------|----------------||----------------|---------------|----------------|------------------|----------------|-------						
 &none    KL_ASG(F1)    KL_CSA(F2)          KL_CA(F3)      KL_AS(F4)        KL_AG(F5)         KR_AG(F6)        KR_AS(F7)       KR_CA(F8)        KR_CSA(F9)         KR_ASG(F10)      &none
@@ -294,12 +295,6 @@
                        ML_ESC              ML_DEL         ML_TAB           &none             &none            ML_ENT          ML_SPC           ML_BSPC
                         >;
                 };
-//-----------------------------------------------------------------
-//|BTCLR|     |OBLE |OUSB |OTOG |||||MCAM | VOL+|NEXT | BRI+|CAPS |
-//| BT1 | BT2 | BT3 | BT4 | BT5 |||||MMIC | MUTE|PL/PA| BRI-|SLCK |
-//| BTP | BTN |to(x)|to(0)|to(3)|||||MALL | VOL-|PREV | P/B |NLCK |
-//      |ESC12|DEL13|TAB16|     |||||     |ENT14|SPC11|BSPC15
-
                 tech_and_media { // TECHMEDIA 15
                         bindings = <
 //----|--------------|-------------------|--------------|----------------|----------------||----------------|---------------|----------------|------------------|----------------|-------						
