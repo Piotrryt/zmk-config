@@ -59,26 +59,14 @@
 #define KR_CSAG(keycode) &orr RC(RS(LA(RGUI))) keycode
 #define KR_CAG(keycode) &orr RC(LA(RGUI)) keycode
 //left thumb
-#define ML_ESC &tmh 7 ESCAPE //NUMPAD
-#define ML_DEL &tmh 8 DELETE //NAVGATION
-#define ML_TAB &tmh 11 TAB //MOUSE
+#define ML_ESC &tmh NUMPAD ESCAPE 
+#define ML_DEL &tmh NAVGATION DELETE
+#define ML_TAB &tmh MOUSE TAB
 //right thumb
-#define ML_ENT &tmh 9 ENTER //FUNCTION
-#define ML_SPC &tmh 6 SPACE //NUMBERANDSSYMBOL
-#define ML_BSPC &tmh 10 BACKSPACE //TECHMEDIA
-//moves
-#define M1_BTB &kp LC(LS(TAB))
-#define M1_TAB &kp LC(TAB)
-#define M2_BTB &kp LA(LS(TAB))
-#define M2_TAB &kp LA(TAB)
-#define M3_BTB &kp LC(LG(LEFT))
-#define M3_TAB &kp LC(LG(RIGHT))
-//dels
-#define D_BSPW &kp LC(BSPC)
-#define D_BSPBL &kp LC(LS(BSPC))
-#define D_DELW &kp LC(LS(DEL))
-#define D_DELEL &kp LC(LS(DEL))
-//powertoys
+#define ML_ENT &tmh FUNCTION ENTER
+#define ML_SPC &tmh NUMBERANDSSYMBOL SPACE
+#define ML_BSPC &tmh TECHMEDIA BACKSPACE
+
 #define PT_CAM &kp RG(RS(O)) 
 #define PT_MIC &kp RG(RS(A))
 #define PT_ALL &kp RG(RS(Q))
@@ -262,11 +250,11 @@
                 };
 		navigation { // NAVGATION 13
                         bindings = <
-//----|--------------|-------------------|--------------|----------------|----------------||----------------|---------------|----------------|------------------|----------------|-------						
-&none    KL_ASG(0)     KL_CSA(0)           KL_CA(M1_BTB)  KL_AS(M1_TAB)    KL_AG(0)          &kp INS          &kp HOME        &kp UP           &kp END            &kp LA(RIGHT)    &none
-&none    KL_K(0)       KL_S(D_BSPW)        KL_C(M2_BTB)   KL_A(M2_TAB)     KL_G(D_DELW)      &kp DEL          &kp LEFT        &kp DOWN         &kp RIGHT          &kp LA(LEFT)     &none
-&none    KL_CAG(0)     KL_CSAG(D_BSPBL)    M3_BTB         M3_TAB           KL_CG(D_DELEL)    &kp RGUI         &kp PG_DN       &kp PSCRN        &kp PG_UP          &kp K_APP        &none
-                       ML_ESC              ML_DEL         ML_TAB           &none             &none            ML_ENT          ML_SPC           ML_BSPC
+//----|--------------|----------------------|-------------------|----------------|------------------||----------------|---------------|----------------|------------------|----------------|-------						
+&none    KL_ASG(0)     KL_CSA(0)             KL_CA(LC(LS(TAB)))  KL_AS(LC(TAB))    KL_AG(0)            &kp INS          &kp HOME        &kp UP           &kp END            &kp LA(RIGHT)    &none
+&none    KL_K(0)       KL_S(LC(BSPC))        KL_C(LA(LS(TAB)))   KL_A(LA(TAB))     KL_G(LC(LS(DEL)))   &kp DEL          &kp LEFT        &kp DOWN         &kp RIGHT          &kp LA(LEFT)     &none
+&none    KL_CAG(0)     KL_CSAG(LC(LS(BSPC))) LC(LG(LEFT))        LC(LG(RIGHT))     KL_CG(LC(LS(DEL)))  &kp RGUI         &kp PG_DN       &kp PSCRN        &kp PG_UP          &kp K_APP        &none
+                       ML_ESC                ML_DEL              ML_TAB           &none                &none            ML_ENT          ML_SPC           ML_BSPC
                         >;
                 };
 		function { // FUNCTION 14
