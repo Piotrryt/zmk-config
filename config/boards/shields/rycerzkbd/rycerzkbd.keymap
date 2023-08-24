@@ -277,7 +277,7 @@
 //----|--------------|-------------------|--------------|----------------|----------------||----------------|---------------|----------------|------------------|----------------|-------						
 &none    KL_ASG(0)     KL_CSA(0)           KL_CA(M1_BTB)  KL_AS(M1_TAB)    KL_AG(0)          &kp INS          &kp HOME        &kp UP           &kp END            &kp LA(RIGHT)    &none
 &none    KL_K(0)       KL_S(D_BSPW)        KL_C(M2_BTB)   KL_A(M2_TAB)     KL_G(D_DELW)      &kp DEL          &kp LEFT        &kp DOWN         &kp RIGHT          &kp LA(LEFT)     &none
-&none    KL_CAG(0)     KL_CSAG(D_BSPBL)    M3_BTB         M3_TAB           KL_CG(D_DELEL)    &kp RGUI         &kp PG_DOWN     &kp PSCRN        &kp PG_UP          &kp K_APP        &none
+&none    KL_CAG(0)     KL_CSAG(D_BSPBL)    M3_BTB         M3_TAB           KL_CG(D_DELEL)    &kp RGUI         &kp PG_DN       &kp PSCRN        &kp PG_UP          &kp K_APP        &none
                        ML_ESC              ML_DEL         ML_TAB           &none             &none            ML_ENT          ML_SPC           ML_BSPC
                         >;
                 };
