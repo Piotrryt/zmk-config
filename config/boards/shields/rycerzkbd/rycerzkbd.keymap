@@ -26,7 +26,7 @@
 //left
 #define KL_ASG(keycode) &orl LA(LS(LGUI)) keycode
 #define KL_CSA(keycode) &orl LC(LS(LALT)) keycode
-#define KL_CA(keycode) &orl LC(LA) keycode
+#define KL_CA(keycode) &orl LC(LALT) keycode
 #define KL_AS(keycode) &orl LA(LSHFT) keycode
 #define KL_AG(keycode) &orl LA(LGUI) keycode
 #define KL_K(keycode) &hrl K_APP keycode
@@ -202,15 +202,10 @@
                 default_colemak { // COL 0
                         bindings = <
 //----|--------------|-------------------|--------------|----------------|----------------||----------------|---------------|----------------|------------------|----------------|-------						
-//&none    KL_ASG(Q)     KL_CSA(W)           KL_CA(F)       KL_AS(P)         KL_AG(B)          KR_AG(J)         KR_AS(L)        KR_CA(U)         KR_CSA(Y)          KR_ASG(SEMI)     &none
-&none    KL_ASG(Q)     KL_CSA(W)           KL_CA(F)       &none         &none          &none            &none           &none            &none              &none            &none
-
-//&none    KL_K(A)       KL_S(R)             KL_C(S)        KL_A(T)          KL_G(G)           KR_G(M)          KR_A(N)         KR_C(E)          KR_S(I)            KR_K(O)          &none
-&none    &none         &none               &none          &none            &none             &none            &none           &none            &none              &none            &none
-//&none    KL_CAG(Z)     KL_CSAG(X)          &mlh CIU C     &mlh COI D       KL_CG(V)          KR_CG(K)         &mrh COI H      &mrh CIU COMMA   KR_CSAG(PERIOD)    KR_CAG(SLASH)    &none
-&none    &none         &none               &none          &none            &none             &none            &none           &none            &none              &none            &none
-                       //ML_ESC              ML_DEL         ML_TAB           &none             &none            ML_ENT          ML_SPC           ML_BSPC
-                       &none               &none          &none            &none             &none            &none           &none            &none
+&none    KL_ASG(Q)     KL_CSA(W)           KL_CA(F)       KL_AS(P)         KL_AG(B)          KR_AG(J)         KR_AS(L)        KR_CA(U)         KR_CSA(Y)          KR_ASG(SEMI)     &none
+&none    KL_K(A)       KL_S(R)             KL_C(S)        KL_A(T)          KL_G(G)           KR_G(M)          KR_A(N)         KR_C(E)          KR_S(I)            KR_K(O)          &none
+&none    KL_CAG(Z)     KL_CSAG(X)          &mlh CIU C     &mlh COI D       KL_CG(V)          KR_CG(K)         &mrh COI H      &mrh CIU COMMA   KR_CSAG(PERIOD)    KR_CAG(SLASH)    &none
+                       ML_ESC              ML_DEL         ML_TAB           &none             &none            ML_ENT          ML_SPC           ML_BSPC
                         >;
                 };
                 colemak_international { // COI 1
