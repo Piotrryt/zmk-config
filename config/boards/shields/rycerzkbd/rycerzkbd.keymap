@@ -90,111 +90,98 @@
 
 / {
 	behaviors {
-        
-		prog_caps: behavior_prog_caps_word {
-				compatible = "zmk,behavior-caps-word";
-				label = "PROG_CAPS";
-				#binding-cells = <0>;
-				continue-list = <UNDERSCORE>;
-		};
-		hrl: left_hand_home_row_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LEFT_POSITIONAL_HOME_ROW_HOLD_TAP";
-            #binding-cells = <2>;
-            flavor = "tap-unless-interrupted";
-            tapping-term-ms = <100>;
-            quick-tap-ms = <200>;
-			global-quick-tap;
-            bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <6 7 8 9 10 13 14 15 16 17 18 19 20 21 22 30 31 32 33 34 41 42 43>;
-        };
-		krhrl: left_hand_home_row_hold_key_repeat {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LEFT_POSITIONAL_HOME_ROW_HOLD_KEY_REPEAT";
-            #binding-cells = <2>;
-            flavor = "tap-unless-interrupted";
-            tapping-term-ms = <100>;
-            quick-tap-ms = <200>;
-			global-quick-tap;
-            bindings = <&kp>, <&key_repeat>;
-            hold-trigger-key-positions = <6 7 8 9 10 13 14 15 16 17 18 19 20 21 22 30 31 32 33 34 41 42 43>;
-		};
-        cwrhrl: left_hand_home_row_hold_caps_word {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LEFT_POSITIONAL_HOME_ROW_HOLD_CAPS_WORD";
-            #binding-cells = <2>;
-            flavor = "tap-unless-interrupted";
-            tapping-term-ms = <100>;
-            quick-tap-ms = <200>;
-			global-quick-tap;
-            bindings = <&kp>, <&caps_word>;
-            hold-trigger-key-positions = <6 7 8 9 10 18 19 20 21 22 30 31 32 33 34 41 42 43>;
-		};		
-		orl: left_hand_other_row_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LEFT_POSITIONAL_HOLD_TAP";
-            #binding-cells = <2>;
-            flavor = "tap-unless-interrupted";
-            tapping-term-ms = <100>;
-            quick-tap-ms = <200>;
-			global-quick-tap;
-            bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <6 7 8 9 10 18 19 20 21 22 30 31 32 33 34 41 42 43>;
-        };
-		mlh: left_hand_momentary_leyer_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LEFT_MOMENTARY_LEYER_HOLD_TAP";
-            #binding-cells = <2>;
-            flavor = "tap-unless-interrupted";
-            tapping-term-ms = <100>;
-            quick-tap-ms = <200>;
-			global-quick-tap;
-            bindings = <&mo>, <&kp>;
-            hold-trigger-key-positions = <6 7 8 9 10 18 19 20 21 22 30 31 32 33 34 41 42 43>;
-        };
-		hrr: right_hand_home_row_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RIGHT_POSITIONAL_HOME_ROW_HOLD_TAP";
-            #binding-cells = <2>;
-            flavor = "tap-unless-interrupted";
-            tapping-term-ms = <100>;
-            quick-tap-ms = <200>;
-			global-quick-tap;
-            bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <1 2 3 4 5 13 14 15 16 17 18 19 20 21 22 25 26 27 28 29 36 37 38>;
-        };
-		orr: right_hand_other_row_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RIGHT_POSITIONAL_HOLD_TAP";
-            #binding-cells = <2>;
-            flavor = "tap-unless-interrupted";
-            tapping-term-ms = <100>;
-            quick-tap-ms = <200>;
-			global-quick-tap;
-            bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <1 2 3 4 5 13 14 15 16 17 25 26 27 28 29 36 37 38>;
-        };
-		mrh: right_hand_momentary_leyer_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RIGHT_MOMENTARY_LEYER_HOLD_TAP";
-            #binding-cells = <2>;
-            flavor = "tap-unless-interrupted";
-            tapping-term-ms = <100>;
-            quick-tap-ms = <200>;
-			global-quick-tap;
-            bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <1 2 3 4 5 13 14 15 16 17 25 26 27 28 29 36 37 38>;
-        };
-		tmh: thumb_row_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "THUMB_MOMENTARY_HOLD_TAP";
-            #binding-cells = <2>;
-            flavor = "tap-unless-interrupted";
-            tapping-term-ms = <100>;
-            quick-tap-ms = <200>;
-			global-quick-tap;
-            bindings = <&mo>, <&kp>;
-        };
+           prog_caps: behavior_prog_caps_word { 
+               compatible = "zmk,behavior-caps-word";
+               label = "PROG_CAPS";
+               #binding-cells = <0>;
+               continue-list = <UNDERSCORE>;
+           };
+	   hrl: left_hand_home_row_hold_tap {
+               compatible = "zmk,behavior-hold-tap";
+               label = "LEFT_POSITIONAL_HOME_ROW_HOLD_TAP";
+               #binding-cells = <2>;
+               flavor = "tap-unless-interrupted";
+               tapping-term-ms = <100>;
+               quick-tap-ms = <200>;   
+               global-quick-tap;
+               bindings = <&kp>, <&kp>;
+               hold-trigger-key-positions = <6 7 8 9 10 13 14 15 16 17 18 19 20 21 22 30 31 32 33 34 41 42 43>;
+           };
+           orl: left_hand_other_row_hold_tap {
+               compatible = "zmk,behavior-hold-tap";
+               label = "LEFT_POSITIONAL_HOLD_TAP";
+               #binding-cells = <2>;
+               flavor = "tap-unless-interrupted";
+               tapping-term-ms = <100>;
+               quick-tap-ms = <200>;
+               global-quick-tap;
+               bindings = <&kp>, <&kp>;
+               hold-trigger-key-positions = <6 7 8 9 10 18 19 20 21 22 30 31 32 33 34 41 42 43>;
+           };
+	   krhrl: left_hand_home_row_hold_key_repeat {
+               compatible = "zmk,behavior-hold-tap";
+               label = "LEFT_POSITIONAL_HOME_ROW_HOLD_KEY_REPEAT";
+               #binding-cells = <2>;
+               flavor = "tap-unless-interrupted";
+               tapping-term-ms = <100>;
+               quick-tap-ms = <200>;
+               global-quick-tap;
+               bindings = <&kp>, <&key_repeat>;
+               hold-trigger-key-positions = <6 7 8 9 10 13 14 15 16 17 18 19 20 21 22 30 31 32 33 34 41 42 43>;
+           };
+           cwrhrl: left_hand_home_row_hold_caps_word {
+               compatible = "zmk,behavior-hold-tap";
+               label = "LEFT_POSITIONAL_HOME_ROW_HOLD_CAPS_WORD";
+               #binding-cells = <2>;
+               flavor = "tap-unless-interrupted";
+               tapping-term-ms = <100>;
+               quick-tap-ms = <200>;
+               global-quick-tap;
+               bindings = <&kp>, <&caps_word>;
+               hold-trigger-key-positions = <6 7 8 9 10 18 19 20 21 22 30 31 32 33 34 41 42 43>;
+           };		
+           hrr: right_hand_home_row_hold_tap {
+               compatible = "zmk,behavior-hold-tap";
+               label = "RIGHT_POSITIONAL_HOME_ROW_HOLD_TAP";
+               #binding-cells = <2>;
+               flavor = "tap-unless-interrupted";
+               tapping-term-ms = <100>;
+               quick-tap-ms = <200>;
+               global-quick-tap;
+               bindings = <&kp>, <&kp>;
+               hold-trigger-key-positions = <1 2 3 4 5 13 14 15 16 17 18 19 20 21 22 25 26 27 28 29 36 37 38>;
+           };
+           orr: right_hand_other_row_hold_tap {
+               compatible = "zmk,behavior-hold-tap";
+               label = "RIGHT_POSITIONAL_HOLD_TAP";
+               #binding-cells = <2>;
+               flavor = "tap-unless-interrupted";
+               tapping-term-ms = <100>;
+               quick-tap-ms = <200>;
+               global-quick-tap;
+               bindings = <&kp>, <&kp>;
+               hold-trigger-key-positions = <1 2 3 4 5 13 14 15 16 17 25 26 27 28 29 36 37 38>;
+           };
+           imh: international_momentary_leyer_hold_tap {
+               compatible = "zmk,behavior-hold-tap";
+               label = "RIGHT_MOMENTARY_LEYER_HOLD_TAP";
+               #binding-cells = <2>;
+               flavor = "tap-unless-interrupted";
+               tapping-term-ms = <100>;
+               quick-tap-ms = <200>;
+               global-quick-tap;
+               bindings = <&mo>, <&kp>;
+           };
+           tmh: thumb_row_hold_tap {
+               compatible = "zmk,behavior-hold-tap";
+               label = "THUMB_MOMENTARY_HOLD_TAP";
+               #binding-cells = <2>;
+               flavor = "tap-unless-interrupted";
+               tapping-term-ms = <100>;
+               quick-tap-ms = <200>;
+               global-quick-tap;
+               bindings = <&mo>, <&kp>;
+           };
 		
 	};
 
@@ -205,7 +192,7 @@
 //----|--------------|-------------------|--------------|----------------|----------------||----------------|---------------|----------------|------------------|----------------|-------						
 &none    KL_ASG(Q)     KL_CSA(W)           KL_CA(F)       KL_AS(P)         KL_AG(B)          KR_AG(J)         KR_AS(L)        KR_CA(U)         KR_CSA(Y)          KR_ASG(SEMI)     &none
 &none    KL_K(A)       KL_S(R)             KL_C(S)        KL_A(T)          KL_G(G)           KR_G(M)          KR_A(N)         KR_C(E)          KR_S(I)            KR_K(O)          &none
-&none    KL_CAG(Z)     KL_CSAG(X)          &mlh CIU C     &mlh COI D       KL_CG(V)          KR_CG(K)         &mrh COI H      &mrh CIU COMMA   KR_CSAG(PERIOD)    KR_CAG(SLASH)    &none
+&none    KL_CAG(Z)     KL_CSAG(X)          &imh CIU C     &imh COI D       KL_CG(V)          KR_CG(K)         &imh COI H      &imh CIU COMMA   KR_CSAG(PERIOD)    KR_CAG(SLASH)    &none
                        ML_ESC              ML_DEL         ML_TAB           &none             &none            ML_ENT          ML_SPC           ML_BSPC
                         >;
                 };
@@ -232,7 +219,7 @@
 //----|--------------|-------------------|--------------|----------------|----------------||----------------|---------------|----------------|------------------|----------------|-------						
 &none    KL_ASG(Q)     KL_CSA(W)           KL_CA(E)       KL_AS(R)         KL_AG(T)          KR_AG(Y)         KR_AS(U)        KR_CA(I)         KR_CSA(O)          KR_ASG(P)        &none
 &none    KL_K(A)       KL_S(S)             KL_C(D)        KL_A(F)          KL_G(G)           KR_G(H)          KR_A(J)         KR_C(E)          KR_S(I)            KR_K(SEMI)       &none
-&none    KL_CAG(Z)     KL_CSAG(X)          &mlh QIU C     &mlh QWI V       KL_CG(B)          KR_CG(N)         &mrh COI M      &mrh CIU COMMA   KR_CSAG(PERIOD)    KR_CAG(SLASH)    &none
+&none    KL_CAG(Z)     KL_CSAG(X)          &imh QIU C     &imh QWI V       KL_CG(B)          KR_CG(N)         &imh QWI M      &imh QIU COMMA   KR_CSAG(PERIOD)    KR_CAG(SLASH)    &none
                        ML_ESC              ML_DEL         ML_TAB           &none             &none            ML_ENT          ML_SPC           ML_BSPC
                         >;
                 };
