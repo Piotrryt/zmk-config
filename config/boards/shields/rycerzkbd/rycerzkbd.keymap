@@ -133,7 +133,7 @@
 &none    &kp Q         &kp W               &kp F          &kp P            &kp B             &kp J            &kp L           &kp U            &kp Y              &kp SEMI         &none
 &none    KL_G(A)       KL_C(R)             KL_A(S)        KL_S(T)          KL_K(G)           KR_K(M)          KR_S(N)         KR_A(E)          KR_C(I)            KR_G(O)          &none
 &none    &kp Z         &kp X               &ihl CIU C     &ihl COI D       &kp V             &kp K            &ihr COI H      &ihr CIU COMMA   &kp PERIOD         &kp SLASH        &none
-                       &none               &none          &none            &none             &none            &none           &none            &none
+                       KT_ESCL             &none          &none            &none             &none            &none           &none            &none
 //                       KT_ESCL             KT_SPCN        &kp TAB          &none             &none            KT_ENTS         KT_BSPCN         KT_DELF
                         >;
                 };
