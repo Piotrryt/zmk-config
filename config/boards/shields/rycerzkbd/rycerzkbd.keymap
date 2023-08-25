@@ -212,7 +212,7 @@
                 leyers {
                         bindings = <
 //----|--------------|-------------------|--------------|----------------|----------------||----------------|---------------|----------------|------------------|----------------|-------
-&none    &none         &none               &none          &none            &none             PT_CAM           &to NUMPAD      &to LEYERS       &none              &to NUMBES       &none
+&none    &none         &none               &none          &none            &none             PT_CAM           &to NUMPAD      &to LEYERS       &none              &to NUMBERS      &none
 &none    &none         &none               &none          &none            &none             PT_MIC           &to COL         &to COL          &to COL            &to SYMBOLS      &none
 &none    &none         &none               &none          &none            &none             PT_ALL           &to TECHMEDIA   &to NAVGATION    &none              &to FUNCTION     &none
                        KL_ESCL             KL_SPCN        KL_TABM          &none             &none            KL_ENTS         KL_BSPCN         KL_DELF
