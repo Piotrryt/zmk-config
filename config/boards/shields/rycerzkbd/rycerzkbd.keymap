@@ -194,9 +194,9 @@
                 function {
                         bindings = <
 //----|--------------|-------------------|--------------|----------------|----------------||----------------|---------------|----------------|------------------|----------------|-------
-&none    &kp F1        KL_CSA(F2)          &kp F3         &kp F4           &kp F5            &kp F6           &kp F7          &kp F8           &kp F9             &kp F10          &none
+&none    &kp F1        &kp F2              &kp F3         &kp F4           &kp F5            &kp F6           &kp F7          &kp F8           &kp F9             &kp F10          &none
 &none    KL_G(F11)     KL_C(F12)           KL_A(F13)      KL_S(F14)        KL_K(F15)         KR_K(F16)        KR_S(F17)       KR_A(F18)        KR_C(F19)          KR_G(F20)        &none
-&none    &kp F21       KL_CSAG(F22)        &kp F23        &none            &none             &none            &none           &none            &none              &none            &none
+&none    &kp F21       &kp F22             &kp F23        &none            &none             &none            &none           &none            &none              &none            &none
                        KL_ESCL             KL_SPCN        KL_TABM          &none             &none            KL_ENTS         KL_BSPCN         KL_DELF
                         >;
                 };
