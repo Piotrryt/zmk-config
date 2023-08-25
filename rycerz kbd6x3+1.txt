@@ -4,7 +4,7 @@ HOME ROW MODS
 	[SHFT RALT]=si
 //-----------------------------------------------------------------
 //| asg | csa | ca  | as  | ag  ||||| ag  | as  | ca  | csa | asg |
-//|  k  |  s  |  c  |  a  |  g  |||||  g  |  a  |  c  |  s  |  k  |
+//|  g  |  c  |  a  |  s  |  k  |||||  k  |  s  |  a  |  c  |  g  |
 //| cag |csag | si()| i() | cg  ||||| cg  | i() | si()|csag | cag |
 // LEY_ESC|NAV_SPC|MOU_TAB|     |||||     |SYM_ENT|NUM_BSPC|FUN_DEL
 
@@ -25,7 +25,7 @@ DefaultColemak
 ColemakInternational no mod
 //-----------------------------------------------------------------
 //|     |     |  .  |     |     |||||     |  Ł  |     |  .  |     |
-//|  Ą  |  .  |  Ś  |     |     |||||     |  Ń  |  Ę  |  .  |  Ó  | kp
+//|  Ą  |  .  |  Ś  |     |     |||||     |  Ń  |  Ę  |  .  |  Ó  |
 //|  Ż  |  Ź  |  Ć  |     |     |||||  .  |     |     |     | ' " |
 // LEY_ESC|NAV_SPC|MOU_TAB|     |||||     |SYM_ENT|NUM_BSPC|FUN_DEL
 

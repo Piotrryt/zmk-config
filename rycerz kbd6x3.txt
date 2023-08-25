@@ -1,0 +1,48 @@
+                                   DefaultColemak
+                                   //---g-----c-----a-----s-----k---------k-----s-----a-----c-----g---
+                                   //|  Q  |  W  |  F  |  P  |  B  |||||  J  |  L  |  U  |  Y  | ; : |
+                                   //|  A  |  R  |  S  |  T  |  G  |||||  M  |  N  |  E  |  I  |  O  |
+                                   //|  Z  |  X  |  C u|  D i|  V  |||||  K  |  H i| , <u| . > | / ? |
+                                   // LEY_ESC|NAV_SPC|MOU_TAB|     |||||     |SYM_ENT|NUM_BSPC|FUN_DEL
+                                   
+                                   ColemakInternational no mod
+                                   //-----------------------------------------------------------------
+                                   //|     |     |  .  |     |     |||||     |  Ł  |     |  .  |     |
+                                   //|  Ą  |  .  |  Ś  |     |     |||||     |  Ń  |  Ę  |  .  |  Ó  |
+                                   //|  Ż  |  Ź  |  Ć  |     |     |||||  .  |     |     |     | ' " |
+                                   // LEY_ESC|NAV_SPC|MOU_TAB|     |||||     |SYM_ENT|NUM_BSPC|FUN_DEL
+                                   
+                                   ColemakInternationalUpper no mod
+                                   //-----------------------------------------------------------------
+                                   //|     |     |  .  |     |     |||||     |  Ł  |     |  .  |     |
+                                   //|  Ą  |  .  |  Ś  |     |     |||||     |  Ń  |  Ę  |  .  |  Ó  |
+                                   //|  Ż  |  Ź  |  Ć  |     |     |||||  .  |     |     |     | ' " |
+                                   // LEY_ESC|NAV_SPC|MOU_TAB|     |||||     |SYM_ENT|NUM_BSPC|FUN_DEL
+
+Navigation                                                              numbers
+//---g-----c-----a-----s-----k---------k-----s-----a-----c-----g---     //-----------------------------------------------------------------
+//|     |     | cst | ct  |     ||||| INS | HOM | UP  | END |aRGT |     //|  1  |  2  |  3  |  4  |  5  |||||     |     |     |     |     |
+//|     | cbs | ast | at  | cd  ||||| DEL | LFT | DWN | RGT |aLFT |     //|  6  |  7  |  8  |  9  |  0  ||||| KAPP|RSHFT| LALT|RCTRL| RGUI|
+//|     |csbs |cglf |cgrt | csd ||||| GUI |PGDN |PSCRN|PGDN |KAPP |     //|  =  |  +  |  -  |  _  |     |||||     |     | RALT|     |     |
+// LEY_ESC|NAV_SPC|MOU_TAB|     |||||     |SYM_ENT|NUM_BSPC|FUN_DEL     //    \   |  "|"  |       |     |||||     |SYM_ENT|NUM_BSPC|FUN_DEL
+
+                                                                        symbols
+//-----------------------------------------------------------------     //-----------------------------------------------------------------
+//                                                                      //|  !  |  @  |  #  |  $  |  %  |||||  :  |  "  |  <  |  >  |  ?  |
+//                                                                      //|  ^  |  &  |  *  |  (  |  )  ||||| KAPP|RSHFT| LALT|RCTRL| RGUI|
+//                                                                      //|  [  |  {  |  ]  |  }  |     |||||  ;  |  '  |  ,  |  .  |  /  |
+//                                                                      //    `   |   ~   |       |     |||||     |SYM_ENT|NUM_BSPC|FUN_DEL
+
+leyers                                                                  Function                                                           
+//-----------------------------------------------------------------     //---g-----c-----a-----s-----k---------k-----s-----a-----c-----g---
+//|     |     |     |     |     ||||| MCAM|NuPAD|LEYER|     |CAPS |     //| F1  | F2  | F3  | F4  | F5  ||||| F6  | F7  | F8  | F9  | F10 |
+//|     |     |     |     |     ||||| MMIC| COL | COL | COL |SYMB |     //| F11 | F12 | F13 | F14 | F15 ||||| F16 | F17 | F18 | F19 | F20 |
+//|     |     |     |     |     ||||| MALL| TECH|NAVIG|     |FUNC |     //| F21 | F22 | F23 |     |     |||||     |     |     |     |     |
+// LEY_ESC|NAV_SPC|MOU_TAB|     |||||     |SYM_ENT|NUM_BSPC|FUN_DEL     // LEY_ESC|NAV_SPC|MOU_TAB|     |||||     |SYM_ENT|NUM_BSPC|FUN_DEL
+
+TechnMedia no mod                                                       NumPad no mod                                                      
+//-----------------------------------------------------------------     //-----------------------------------------------------------------
+//|BTCLR|     |OBLE |OUSB |OTOG ||||| VOL+| VOL+|NEXT | BRI+|CAPS |     //|  !  |     |     |  =  |  %  ||||| .   | N7  | N8  | N9  |  N- |
+//| BT5 | BT4 | BT3 | BT2 | BT1 ||||| MUTE| PLAY|PL/PA| BRI-|SLCK |     //| {   |  [  |  (  | N/  |  <  ||||| N,  | N4  | N5  | N6  |  N+ |
+//| BTP | BTN |     |     |     ||||| VOL-| STOP|PREV | P/B |NLCK |     //| }   |  ]  |  )  | N*  |  >  ||||| N0  | N1  | N2  | N3  |N_RET|
+// LEY_ESC|NAV_SPC|MOU_TAB|     |||||     |SYM_ENT|NUM_BSPC|FUN_DEL     // LEY_ESC|NAV_SPC|MOU_TAB|     |||||     |SYM_ENT|NUM_BSPC|FUN_DEL
