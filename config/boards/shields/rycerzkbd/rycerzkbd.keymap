@@ -41,8 +41,8 @@
 #define KL_SPCN &tmh NAVGATION SPACE
 //#define KL_TABM &tmh MOUSE TAB
 #define KL_ENTS &tmh SYMBOLS ENTER
-#define KL_BSPCN &tmh NUMBERS BACKSPACE
-#define KL_DELF &tmh FUNCTION DELETE
+#define KL_BSPCN &tmh NUMBERS BSPC
+#define KL_DELF &tmh FUNCTION DEL
 
 
 #define PT_CAM &kp RG(RS(O)) 
@@ -73,7 +73,7 @@
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <6 7 8 9 10 18 19 20 21 22 30 31 32 33 34 41 42 43>;
         };
-		ihl: lef_international_momentary_leyer_hold_tap {
+        ihl: lef_international_momentary_leyer_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "LEFT_MOMENTARY_LEYER_HOLD_TAP";
             #binding-cells = <2>;
@@ -122,8 +122,8 @@
             quick-tap-ms = <0>;
             bindings = <&mo>, <&kp>;
         };
-		
-	};
+
+    };
 
         keymap {
                 compatible = "zmk,keymap";
@@ -133,7 +133,7 @@
 &none    &kp Q         &kp W               &kp F          &kp P            &kp B             &kp J            &kp L           &kp U            &kp Y              &kp SEMI         &none
 &none    KL_G(A)       KL_C(R)             KL_A(S)        KL_S(T)          KL_K(G)           KR_K(M)          KR_S(N)         KR_A(E)          KR_C(I)            KR_G(O)          &none
 &none    &kp Z         &kp X               &ihl CIU C     &ihl COI D       &kp V             &kp K            &ihr COI H      &ihr CIU COMMA   &kp PERIOD         &kp SLASH        &none
-                       KL_ESCL             KL_SPCN        &kp TAB          &none             &none            KL_ENTS         KL_BSPCN         KL_DELF
+                       KL_ESCL             KL_SPCN        &kp TAB          &none             &none            KL_ENTS         &none            KL_DELF
                         >;
                 };
                 colemak_international {
