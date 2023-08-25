@@ -6,8 +6,7 @@ HOME ROW MODS
 //| asg | csa | ca  | as  | ag  ||||| ag  | as  | ca  | csa | asg |
 //|  k  |  s  |  c  |  a  |  g  |||||  g  |  a  |  c  |  s  |  k  |
 //| cag |csag | si()| i() | cg  ||||| cg  | i() | si()|csag | cag |
-//      |ESC12|DEL13|TAB16|     |||||     |ENT14|SPC11|BSPC15
-ESCnumpad DELnav TABmouse                  ENTfn SPCnumsym BSPCtech 
+// LEY_ESC|NAV_SPC|MOU_TAB|     |||||     |SYM_ENT|NUM_BSPC|FUN_DEL
 
 //-----------------------------------------------------------------
 //  0x|  1 |  2 |  3 |  4 |  5 |||||  6 |  7 |  8 |  9 | 10 | 11x
@@ -16,59 +15,48 @@ ESCnumpad DELnav TABmouse                  ENTfn SPCnumsym BSPCtech
 //         | 36 | 37 | 38 | 39x||||| 40x| 41 | 42 | 43 
 
 
-
-
-DefaultColemak(0)
+DefaultColemak
 //-----------------------------------------------------------------
 //|  Q  |  W  |  F  |  P  |  B  |||||  J  |  L  |  U  |  Y  | ; : |
 //|  A  |  R  |  S  |  T  |  G  |||||  M  |  N  |  E  |  I  |  O  |
 //|  Z  |  X  |  C  |  D  |  V  |||||  K  |  H  | , < | . > | / ? |
-//      |ESC12|DEL13|TAB16|     |||||     |ENT14|SPC11|BSPC15
+// LEY_ESC|NAV_SPC|MOU_TAB|     |||||     |SYM_ENT|NUM_BSPC|FUN_DEL
 
-ColemakInternational(1) no mod
+ColemakInternational no mod
 //-----------------------------------------------------------------
 //|     |     |  .  |     |     |||||     |  Ł  |     |  .  |     |
 //|  Ą  |  .  |  Ś  |     |     |||||     |  Ń  |  Ę  |  .  |  Ó  | kp
 //|  Ż  |  Ź  |  Ć  |     |     |||||  .  |     |     |     | ' " |
-//      |ESC12|DEL13|TAB16|     |||||     |ENT14|SPC11|BSPC15
+// LEY_ESC|NAV_SPC|MOU_TAB|     |||||     |SYM_ENT|NUM_BSPC|FUN_DEL
 
-ColemakInternationalUpper(2) no mod
+ColemakInternationalUpper no mod
 //-----------------------------------------------------------------
 //|     |     |  .  |     |     |||||     |  Ł  |     |  .  |     |
-//|  Ą  |  .  |  Ś  |     | to15||||| to15|  Ń  |  Ę  |  .  |  Ó  |
+//|  Ą  |  .  |  Ś  |     |     |||||     |  Ń  |  Ę  |  .  |  Ó  |
 //|  Ż  |  Ź  |  Ć  |     |     |||||  .  |     |     |     | ' " |
-//      |ESC12|DEL13|TAB16|     |||||     |ENT14|SPC11|BSPC15
+// LEY_ESC|NAV_SPC|MOU_TAB|     |||||     |SYM_ENT|NUM_BSPC|FUN_DEL
 
-Qwerty(3) 
-//-----------------------------------------------------------------
-//|  Q  |  W  |  E  |  R  |  T  |||||  Y  |  U  |  I  |  O  |  P  |
-//|  A  |  S  |  D  |  F  |  G  |||||  H  |  J  |  K  |  L  | ; : |
-//|  Z  |  X  |  C  |  V  |  B  |||||  N  |  M  | , < | . > | / ? |
-//      |ESC12|DEL13|TAB16|     |||||     |ENT14|SPC11|BSPC15
+numbers 
+//----|--------------|-------------------|--------------|----------------|----------------||----------------|---------------|----------------|------------------|----------------|-------						
+&none    &kp N1        &kp N2              &kp N3         &kp N4           &kp N5            &none            &none           &none            &none              &none            &none 
+&none    &kp N6        &kp N7              &kp N8         &kp N9           &kp N10           &kp K_APP        &kp RSHFT       &kp LALT         &kp RCTRL          &kp RGUI         &none
+&none    &kp EQUAL     &kp PLUS            &kp MINUS      &kp UNDER        &none             &none            &none           &kp RALT         &none              &none            &none
+                       &kp BSLH            &kp PIPE       &none            &none             &none            SYM_ENT         NUM_BSPC         FUN_DEL
+                        >;
+                };
+				symbols {
+                        bindings = <
 
-QwertyInternational(4) no mod
-//-----------------------------------------------------------------
-//|     |     |  Ę  |     |     |||||     |  .  |     |  Ó  |     |
-//|  Ą  |  Ś  |  .  |     | to15||||| to15|  .  |  .  |  Ł  |  .  |
-//|  Ż  |  Ź  |  Ć  |     |     |||||  Ń  |     |     |     | ' " |
-//      |ESC12|DEL13|TAB16|     |||||     |ENT14|SPC11|BSPC15
+//----|--------------|-------------------|--------------|----------------|----------------||----------------|---------------|----------------|------------------|----------------|-------						
+&none    &kp EXCL      &kp AT              &kp HASH       &kp DOLLAR       &kp PRCNT         &kp COLON        &kp DQT         &kp LT           &kp GT             &kp QMARK        &none 
+&none    &kp CARET     &kp AMPS            &kp ASTRK      &kp LPAR         &kp RPAR          &kp K_APP        &kp RSHFT       &kp LALT         &kp RCTRL          &kp RGUI         &none
+&none    &kp LBKT      &kp LBRC            &kp RBKT       &kp RBRC         &none             &kp SEMI         &kp APOS        &kp COMMA        &kp PERIOD         &kp SLASH        &none
+                       &kp GRAVE           &kp TILDE      &none            &none             &none            SYM_ENT         NUM_BSPC         FUN_DEL
+                        >;
+                };
 
-QwertyInternationalUpper(5) no mod
-//-----------------------------------------------------------------
-//|     |     |  Ę  |     |     |||||     |  .  |     |  Ó  |     |
-//|  Ą  |  Ś  |  .  |     | to15||||| to15|  .  |  .  |  Ł  |  .  |
-//|  Ż  |  Ź  |  Ć  |     |     |||||  Ń  |     |     |     | ' " |
-//      |ESC12|DEL13|TAB16|     |||||     |ENT14|SPC11|BSPC15
 
-NumAndSym(11) 
-kr &key_repeat cw &caps_word pw &prog_caps
-//----------------------------------------------------------------
-//| 1 ! | 2 @ | 3 # | 4 $ | 5 % ||||| 6 ^ | 7 & | 8 * | 9 ( | 0 ) |                
-//| ` ~ |     |  kr | cw  |     ||||| - _ | = + | [ { | ] } | \"|"|  
-//|     |     |     | cw2 |     ||||| ; : | ' " | , < | . > | / ? | 
-//      |ESC12|DEL13|TAB16|     |||||     |ENT14|SPC11|BSPC15
-
-NumPad(12) no mod
+NumPad no mod
 //----------------------------------------------------------------
 //|  !  |     |     |  =  |  %  ||||| .   | N7  | N8  | N9  |  N- |                
 //| {   |  [  |  (  | N/  |  <  ||||| N,  | N4  | N5  | N6  |  N+ |  
@@ -137,3 +125,39 @@ misc
 
 
  
+
+
+
+
+
+Qwerty(3) 
+//-----------------------------------------------------------------
+//|  Q  |  W  |  E  |  R  |  T  |||||  Y  |  U  |  I  |  O  |  P  |
+//|  A  |  S  |  D  |  F  |  G  |||||  H  |  J  |  K  |  L  | ; : |
+//|  Z  |  X  |  C  |  V  |  B  |||||  N  |  M  | , < | . > | / ? |
+// LEY_ESC|NAV_SPC|MOU_TAB|     |||||     |SYM_ENT|NUM_BSPC|FUN_DEL
+
+QwertyInternational(4) no mod
+//-----------------------------------------------------------------
+//|     |     |  Ę  |     |     |||||     |  .  |     |  Ó  |     |
+//|  Ą  |  Ś  |  .  |     | to15||||| to15|  .  |  .  |  Ł  |  .  |
+//|  Ż  |  Ź  |  Ć  |     |     |||||  Ń  |     |     |     | ' " |
+// LEY_ESC|NAV_SPC|MOU_TAB|     |||||     |SYM_ENT|NUM_BSPC|FUN_DEL
+
+QwertyInternationalUpper(5) no mod
+//-----------------------------------------------------------------
+//|     |     |  Ę  |     |     |||||     |  .  |     |  Ó  |     |
+//|  Ą  |  Ś  |  .  |     | to15||||| to15|  .  |  .  |  Ł  |  .  |
+//|  Ż  |  Ź  |  Ć  |     |     |||||  Ń  |     |     |     | ' " |
+// LEY_ESC|NAV_SPC|MOU_TAB|     |||||     |SYM_ENT|NUM_BSPC|FUN_DEL
+
+NumAndSym(11) 
+kr &key_repeat cw &caps_word pw &prog_caps
+//----------------------------------------------------------------
+//| 1 ! | 2 @ | 3 # | 4 $ | 5 % ||||| 6 ^ | 7 & | 8 * | 9 ( | 0 ) |                
+//| ` ~ |     |  kr | cw  |     ||||| - _ | = + | [ { | ] } | \"|"|  
+//|     |     |     | cw2 |     ||||| ; : | ' " | , < | . > | / ? | 
+//      |ESC12|DEL13|TAB16|     |||||     |ENT14|SPC11|BSPC15
+
+
+
