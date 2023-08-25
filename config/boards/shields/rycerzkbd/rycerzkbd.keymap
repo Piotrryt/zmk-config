@@ -37,12 +37,12 @@
 #define KR_S(keycode) &hrr RSHFT keycode
 #define KR_K(keycode) &hrr K_APP keycode
 //thumbs
-#define LEY_ESC &tmh LEYERS ESCAPE 
-#define NAV_SPC &tmh NAVGATION SPACE
-//#define MOU_TAB &tmh MOUSE TAB
-#define SYM_ENT &tmh SYMBOLS ENTER
-#define NUM_BSPC &tmh NUMBERS BACKSPACE
-#define FUN_DEL &tmh FUNCTION DELETE
+#define KT_ESCL &tmh LEYERS ESCAPE 
+#define KT_SPCN &tmh NAVGATION SPACE
+//#define KT_TABM &tmh MOUSE TAB
+#define KT_ENTS &tmh SYMBOLS ENTER
+#define KT_BSPCN &tmh NUMBERS BACKSPACE
+#define KT_DELF &tmh FUNCTION DELETE
 
 
 #define PT_CAM &kp RG(RS(O)) 
@@ -133,7 +133,7 @@
 &none    &kp Q         &kp W               &kp F          &kp P            &kp B             &kp J            &kp L           &kp U            &kp Y              &kp SEMI         &none
 &none    KL_G(A)       KL_C(R)             KL_A(S)        KL_S(T)          KL_K(G)           KR_K(M)          KR_S(N)         KR_A(E)          KR_C(I)            KR_G(O)          &none
 &none    &kp Z         &kp X               &ihl CIU C     &ihl COI D       &kp V             &kp K            &ihr COI H      &ihr CIU COMMA   &kp PERIOD         &kp SLASH        &none
-                       LEY_ESC             NAV_SPC        &kp TAB          &none             &none            SYM_ENT         NUM_BSPC         FUN_DEL
+                       KT_ESCL             KT_SPCN        &kp TAB          &none             &none            KT_ENTS         KT_BSPCN         KT_DELF
                         >;
                 };
                 colemak_international {
@@ -142,7 +142,7 @@
 &none    &none         &none               &none          &none            &none             &none            KRA(L)          &none            &none              &none            &none
 &none    KRA(A)        &none               KRA(S)         &none            &none             &none            KRA(N)          KRA(E)           &none              KRA(O)           &none
 &none    KRA(Z)        KRA(X)              KRA(C)         &none            &none             &none            &none           &none            &none              &kp APOS         &none
-                       LEY_ESC             NAV_SPC        &kp TAB          &none             &none            SYM_ENT         NUM_BSPC         FUN_DEL
+                       KT_ESCL             KT_SPCN        &kp TAB          &none             &none            KT_ENTS         KT_BSPCN         KT_DELF
                         >;
                 };
                 colemak_international_upper {
@@ -151,7 +151,7 @@
 &none    &none         &none               &none          &none            &none             &none            KRAS(L)         &none            &none              &none            &none
 &none    KRAS(A)       &none               KRAS(S)        &none            &none             &none            KRAS(N)         KRAS(E)          &none              KRAS(O)          &none
 &none    KRAS(Z)       KRAS(X)             KRAS(C)        &none            &none             &none            &none           &none            &none              &kp DQT          &none
-                       LEY_ESC             NAV_SPC        &kp TAB          &none             &none            SYM_ENT         NUM_BSPC         FUN_DEL
+                       KT_ESCL             KT_SPCN        &kp TAB          &none             &none            KT_ENTS         KT_BSPCN         KT_DELF
                         >;
                 };
                 numbers {
@@ -160,7 +160,7 @@
 &none    &kp N1        &kp N2              &kp N3         &kp N4           &kp N5            &none            &none           &none            &none              &none            &none 
 &none    &kp N6        &kp N7              &kp N8         &kp N9           &kp N10           &kp K_APP        &kp RSHFT       &kp LALT         &kp RCTRL          &kp RGUI         &none
 &none    &kp EQUAL     &kp PLUS            &kp MINUS      &kp UNDER        &none             &none            &none           &kp RALT         &none              &none            &none
-                       &kp BSLH            &kp PIPE       &none            &none             &none            SYM_ENT         NUM_BSPC         FUN_DEL
+                       &kp BSLH            &kp PIPE       &none            &none             &none            KT_ENTS         KT_BSPCN         KT_DELF
                         >;
                 };
 				symbols {
@@ -170,7 +170,7 @@
 &none    &kp EXCL      &kp AT              &kp HASH       &kp DOLLAR       &kp PRCNT         &kp COLON        &kp DQT         &kp LT           &kp GT             &kp QMARK        &none 
 &none    &kp CARET     &kp AMPS            &kp ASTRK      &kp LPAR         &kp RPAR          &kp K_APP        &kp RSHFT       &kp LALT         &kp RCTRL          &kp RGUI         &none
 &none    &kp LBKT      &kp LBRC            &kp RBKT       &kp RBRC         &none             &kp SEMI         &kp APOS        &kp COMMA        &kp PERIOD         &kp SLASH        &none
-                       &kp GRAVE           &kp TILDE      &none            &none             &none            SYM_ENT         NUM_BSPC         FUN_DEL
+                       &kp GRAVE           &kp TILDE      &none            &none             &none            KT_ENTS         KT_BSPCN         KT_DELF
                         >;
                 };
                 numpad {
@@ -179,7 +179,7 @@
 &none    &kp EXCL      &none               &none          &kp EQUAL        &kp PRCNT         &kp DOT          &kp KP_N7       &kp KP_N8        &kp KP_N9          &kp KP_MINUS     &none
 &none    &kp LBRC      &kp LBKT            &kp LPAR       &kp KP_SLASH     &kp LT            &kp COMMA        &kp KP_N4       &kp KP_N5        &kp KP_N6          &kp KP_PLUS      &none
 &none    &kp RBRC      &kp RBKT            &kp RPAR       &kp KP_MULTIPLY  &kp GT            &kp KP_N0        &kp KP_N1       &kp KP_N2        &kp KP_N3          &kp KP_ENTER     &none
-                       LEY_ESC             NAV_SPC        &kp TAB          &none             &none            SYM_ENT         NUM_BSPC         FUN_DEL
+                       KT_ESCL             KT_SPCN        &kp TAB          &none             &none            KT_ENTS         KT_BSPCN         KT_DELF
                         >;
                 };
                 navigation {
@@ -188,7 +188,7 @@
 &none    &none         &none                 &kp LC(LS(TAB))     &kp LC(TAB)       &none               &kp INS          &kp HOME        &kp UP           &kp END            &kp LA(RIGHT)    &none
 &none    KL_G(0)       KL_C(LC(BSPC))        KL_A(LA(LS(TAB)))   KL_S(LA(TAB))     KL_K(LC(LS(DEL)))   &kp DEL          &kp LEFT        &kp DOWN         &kp RIGHT          &kp LA(LEFT)     &none
 &none    &none         &kp LC(LS(BSPC))      &kp LC(LG(LEFT))    &kp LC(LG(RIGHT)) &kp LC(LS(DEL))     &kp RGUI         &kp PG_DN       &kp PSCRN        &kp PG_UP          &kp K_APP        &none
-                       LEY_ESC               NAV_SPC             &kp TAB           &none               &none            SYM_ENT         NUM_BSPC         FUN_DEL
+                       KT_ESCL               KT_SPCN             &kp TAB           &none               &none            KT_ENTS         KT_BSPCN         KT_DELF
                         >;
                 };
                 function {
@@ -197,7 +197,7 @@
 &none    &kp F1        KL_CSA(F2)          &kp F3         &kp F4           &kp F5            &kp F6           &kp F7          &kp F8           &kp F9             &kp F10          &none
 &none    KL_G(F11)     KL_C(F12)           KL_A(F13)      KL_S(F14)        KL_K(F15)         KR_K(F16)        KR_S(F17)       KR_A(F18)        KR_C(F19)          KR_G(F20)        &none
 &none    &kp F21       KL_CSAG(F22)        &kp F23        &none            &none             &none            &none           &none            &none              &none            &none
-                       LEY_ESC             NAV_SPC        &kp TAB          &none             &none            SYM_ENT         NUM_BSPC         FUN_DEL
+                       KT_ESCL             KT_SPCN        &kp TAB          &none             &none            KT_ENTS         KT_BSPCN         KT_DELF
                         >;
                 };
                 technical {
@@ -206,7 +206,7 @@
 &none    &bt BT_CLR    &none               &out OUT_BLE   &out OUT_USB     &out OUT_TOG      &cp C_VOL_UP     &none           &cp C_NEXT       &cp C_BRI_UP       &kp CAPS         &none
 &none    &bt BT_SEL 4  &bt BT_SEL 3        &bt BT_SEL 2   &bt BT_SEL 1     &bt BT_SEL 0      &cp C_MUTE       &cp C_PLAY      &cp C_PP         &cp C_BRI_DN       &kp SLCK         &none
 &none    &bt BT_PRV    &bt BT_NXT          &none          &none            &none             &cp C_VOL_DN     &cp C_STOP      &cp C_PREV       &kp PAUSE_BREAK    &kp KP_NUM       &none
-                       LEY_ESC             NAV_SPC        &kp TAB          &none             &none            SYM_ENT         NUM_BSPC         FUN_DEL
+                       KT_ESCL             KT_SPCN        &kp TAB          &none             &none            KT_ENTS         KT_BSPCN         KT_DELF
                         >;
                 };
                 leyers {
@@ -215,7 +215,7 @@
 &none    &none         &none               &none          &none            &none             PT_CAM           &to NUMPAD      &to LEYERS       &none              &to NUMBES       &none
 &none    &none         &none               &none          &none            &none             PT_MIC           &to COL         &to COL          &to COL            &to SYMBOLS      &none
 &none    &none         &none               &none          &none            &none             PT_ALL           &to TECHMEDIA   &to NAVGATION    &none              &to FUNCTION     &none
-                       LEY_ESC             NAV_SPC        &kp TAB          &none             &none            SYM_ENT         NUM_BSPC         FUN_DEL
+                       KT_ESCL             KT_SPCN        &kp TAB          &none             &none            KT_ENTS         KT_BSPCN         KT_DELF
                         >;
                 };
         };

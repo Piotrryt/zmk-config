@@ -37,24 +37,18 @@ ColemakInternationalUpper no mod
 // LEY_ESC|NAV_SPC|MOU_TAB|     |||||     |SYM_ENT|NUM_BSPC|FUN_DEL
 
 numbers 
-//----|--------------|-------------------|--------------|----------------|----------------||----------------|---------------|----------------|------------------|----------------|-------						
-&none    &kp N1        &kp N2              &kp N3         &kp N4           &kp N5            &none            &none           &none            &none              &none            &none 
-&none    &kp N6        &kp N7              &kp N8         &kp N9           &kp N10           &kp K_APP        &kp RSHFT       &kp LALT         &kp RCTRL          &kp RGUI         &none
-&none    &kp EQUAL     &kp PLUS            &kp MINUS      &kp UNDER        &none             &none            &none           &kp RALT         &none              &none            &none
-                       &kp BSLH            &kp PIPE       &none            &none             &none            SYM_ENT         NUM_BSPC         FUN_DEL
-                        >;
-                };
-				symbols {
-                        bindings = <
+//-----------------------------------------------------------------
+//|  1  |  2  |  3  |  4  |  5  |||||     |     |     |     |     |
+//|  6  |  7  |  8  |  9  |  0  ||||| KAPP|RSHFT| LALT|RCTRL| RGUI|
+//|  =  |  +  |  -  |  _  |     |||||     |     | RALT|     |     |
+//    \   |  "|"  |       |     |||||     |SYM_ENT|NUM_BSPC|FUN_DEL
 
-//----|--------------|-------------------|--------------|----------------|----------------||----------------|---------------|----------------|------------------|----------------|-------						
-&none    &kp EXCL      &kp AT              &kp HASH       &kp DOLLAR       &kp PRCNT         &kp COLON        &kp DQT         &kp LT           &kp GT             &kp QMARK        &none 
-&none    &kp CARET     &kp AMPS            &kp ASTRK      &kp LPAR         &kp RPAR          &kp K_APP        &kp RSHFT       &kp LALT         &kp RCTRL          &kp RGUI         &none
-&none    &kp LBKT      &kp LBRC            &kp RBKT       &kp RBRC         &none             &kp SEMI         &kp APOS        &kp COMMA        &kp PERIOD         &kp SLASH        &none
-                       &kp GRAVE           &kp TILDE      &none            &none             &none            SYM_ENT         NUM_BSPC         FUN_DEL
-                        >;
-                };
-
+symbols 
+//-----------------------------------------------------------------
+//|  !  |  @  |  #  |  $  |  %  |||||  :  |  "  |  <  |  >  |  ?  |
+//|  ^  |  &  |  *  |  (  |  )  ||||| KAPP|RSHFT| LALT|RCTRL| RGUI|
+//|  [  |  {  |  ]  |  }  |     |||||  ;  |  '  |  ,  |  .  |  /  |
+//    `   |   ~   |       |     |||||     |SYM_ENT|NUM_BSPC|FUN_DEL
 
 NumPad no mod
 //----------------------------------------------------------------
@@ -81,6 +75,23 @@ Function(14)
 
 TechnMedia (15) no mod
 MCAM [GUI SHFT O] MMIC [GUI SHFT A] MALL [GUI SHFT O]
+
+               technical {
+                        bindings = <
+//----|--------------|-------------------|--------------|----------------|----------------||----------------|---------------|----------------|------------------|----------------|-------						
+&none    &bt BT_CLR    &none               &out OUT_BLE   &out OUT_USB     &out OUT_TOG      &cp C_VOL_UP     &none           &cp C_NEXT       &cp C_BRI_UP       &kp CAPS         &none
+&none    &bt BT_SEL 4  &bt BT_SEL 3        &bt BT_SEL 2   &bt BT_SEL 1     &bt BT_SEL 0      &cp C_MUTE       &cp C_PLAY      &cp C_PP         &cp C_BRI_DN       &kp SLCK         &none
+&none    &bt BT_PRV    &bt BT_NXT          &none          &none            &none             &cp C_VOL_DN     &cp C_STOP      &cp C_PREV       &kp PAUSE_BREAK    &kp KP_NUM       &none
+                       LEY_ESC             NAV_SPC        &kp TAB          &none             &none            SYM_ENT         NUM_BSPC         FUN_DEL
+                        >;
+                };
+                leyers {
+                        bindings = <
+//----|--------------|-------------------|--------------|----------------|----------------||----------------|---------------|----------------|------------------|----------------|-------						
+&none    &none         &none               &none          &none            &none             PT_CAM           &to NUMPAD      &to LEYERS       &none              &to NUMBES       &none
+&none    &none         &none               &none          &none            &none             PT_MIC           &to COL         &to COL          &to COL            &to SYMBOLS      &none
+&none    &none         &none               &none          &none            &none             PT_ALL           &to TECHMEDIA   &to NAVGATION    &none              &to FUNCTION     &none
+                       LEY_ESC             NAV_SPC        &kp TAB          &none             &none            SYM_ENT         NUM_BSPC         FUN_DEL
 
 //-----------------------------------------------------------------
 //|BTCLR|     |OBLE |OUSB |OTOG |||||MCAM | VOL+|NEXT | BRI+|CAPS |
