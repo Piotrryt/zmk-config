@@ -45,9 +45,9 @@
 #define KL_DELF &tmh FUNCTION DEL
 
 
-#define PT_CAM &kp RG(RS(O)) 
-#define PT_MIC &kp RG(RS(A))
-#define PT_ALL &kp RG(RS(Q))
+#define PT_CAM &kp LG(LS(O)) 
+#define PT_MIC &kp LG(LS(A))
+#define PT_ALL &kp LG(LS(Q))
  
 
 
