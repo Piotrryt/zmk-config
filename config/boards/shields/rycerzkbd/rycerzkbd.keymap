@@ -158,9 +158,9 @@
                         bindings = <
 //----|--------------|-------------------|--------------|----------------|----------------||----------------|---------------|----------------|------------------|----------------|-------
 &none    &kp N1        &kp N2              &kp N3         &kp N4           &kp N5            &none            &none           &none            &none              &none            &none 
-&none    &kp N6        &kp N7              &kp N8         &kp N9           &kp N0            &kp K_APP        &kp RSHFT       &kp LALT         &kp RCTRL          &kp RGUI         &none
+&none    &kp N6        &kp N7              &kp N8         &kp N9           &kp N0            &kp K_APP        &kp RSHFT       &kp LALT         &kp RCTRL          &kp LGUI         &none
 &none    &kp EQUAL     &kp PLUS            &kp MINUS      &kp UNDER        &none             &none            &none           &kp RALT         &none              &none            &none
-                       &kp BSLH            &kp PIPE       &none            &none             &none            KL_ENTS         KL_BSPCN         KL_DELF
+                       &mo LEYERS          &kp BSLH       &kp PIPE         &none             &none            KL_ENTS         KL_BSPCN         KL_DELF
                         >;
                 };
 				symbols {
@@ -168,9 +168,9 @@
 
 //----|--------------|-------------------|--------------|----------------|----------------||----------------|---------------|----------------|------------------|----------------|-------
 &none    &kp EXCL      &kp AT              &kp HASH       &kp DOLLAR       &kp PRCNT         &kp COLON        &kp DQT         &kp LT           &kp GT             &kp QMARK        &none 
-&none    &kp CARET     &kp AMPS            &kp ASTRK      &kp LPAR         &kp RPAR          &kp K_APP        &kp RSHFT       &kp LALT         &kp RCTRL          &kp RGUI         &none
+&none    &kp CARET     &kp AMPS            &kp ASTRK      &kp LPAR         &kp RPAR          &kp K_APP        &kp RSHFT       &kp LALT         &kp RCTRL          &kp LGUI         &none
 &none    &kp LBKT      &kp LBRC            &kp RBKT       &kp RBRC         &none             &kp SEMI         &kp APOS        &kp COMMA        &kp PERIOD         &kp SLASH        &none
-                       &kp GRAVE           &kp TILDE      KL_TABM          &none             &none            KL_ENTS         KL_BSPCN         KL_DELF
+                       &mo LEYERS          &kp GRAVE      &kp TILDE        &none             &none            KL_ENTS         KL_BSPCN         KL_DELF
                         >;
                 };
                 numpad {
@@ -185,10 +185,10 @@
                 navigation {
                         bindings = <
 //----|--------------|----------------------|-------------------|----------------|------------------||----------------|---------------|----------------|------------------|----------------|-------
-&none    &none         &none                 &kp LC(LS(TAB))     &kp LC(TAB)       &none               &kp INS          &kp HOME        &kp UP           &kp END            &kp LA(RIGHT)    &none
-&none    KL_G(0)       KL_C(LC(BSPC))        KL_A(LA(LS(TAB)))   KL_S(LA(TAB))     KL_K(LC(LS(DEL)))   &kp DEL          &kp LEFT        &kp DOWN         &kp RIGHT          &kp LA(LEFT)     &none
+&none    &none         &kp LA(LS(TAB))       &kp LA(LC(TAB))     &kp LA(TAB)       &none               &kp INS          &kp HOME        &kp UP           &kp END            &kp LA(RIGHT)    &none
+&none    KL_G(0)       KL_C(LC(BSPC))        KL_A(LC(LS(TAB)))   KL_S(LC(TAB))     KL_K(LC(DEL))       &kp DEL          &kp LEFT        &kp DOWN         &kp RIGHT          &kp LA(LEFT)     &none
 &none    &none         &kp LC(LS(BSPC))      &kp LC(LG(LEFT))    &kp LC(LG(RIGHT)) &kp LC(LS(DEL))     &kp RGUI         &kp PG_DN       &kp PSCRN        &kp PG_UP          &kp K_APP        &none
-                       KL_ESCL               KL_SPCN             KL_TABM           &none               &none            KL_ENTS         KL_BSPCN         KL_DELF
+                       KL_ESCL               KL_SPCN             KL_TABM           &none               &none            KL_ENTS         &kp LC(BSPC)     &kp LC(DEL)
                         >;
                 };
                 function {
