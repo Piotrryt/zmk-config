@@ -21,17 +21,17 @@
 
 Navigation                                                              numbers
 //---g-----c-----a-----s-----k---------k-----s-----a-----c-----g---     //-----------------------------------------------------------------
-//|     |     | cst | ct  |     ||||| INS | HOM | UP  | END |aRGT |     //|  1  |  2  |  3  |  4  |  5  |||||     |     |     |     |     |
-//|     | cbs | ast | at  | cd  ||||| DEL | LFT | DWN | RGT |aLFT |     //|  6  |  7  |  8  |  9  |  0  ||||| KAPP|RSHFT| LALT|RCTRL| RGUI|
+//|     | ast | cat | at  |     ||||| INS | HOM | UP  | END |aRGT |     //|  1  |  2  |  3  |  4  |  5  |||||     |     |     |     |     |
+//|     | cbs | cst | ct  | cd  ||||| DEL | LFT | DWN | RGT |aLFT |     //|  6  |  7  |  8  |  9  |  0  ||||| KAPP|RSHFT| LALT|RCTRL| RGUI|
 //|     |csbs |cglf |cgrt | csd ||||| GUI |PGDN |PSCRN|PGDN |KAPP |     //|  =  |  +  |  -  |  _  |     |||||     |     | RALT|     |     |
-// LEY_ESC|NAV_SPC|MOU_TAB|     |||||     |SYM_ENT|NUM_BSPC|FUN_DEL     //    \   |  "|"  |       |     |||||     |SYM_ENT|NUM_BSPC|FUN_DEL
+// LEY_ESC|NAV_SPC|MOU_TAB|     |||||     |SYM_ENT| cbs    | cd         // LEY_ESC|   \   |  "|"  |     |||||     |SYM_ENT|NUM_BSPC|FUN_DEL
 
                                                                         symbols
 //-----------------------------------------------------------------     //-----------------------------------------------------------------
 //                                                                      //|  !  |  @  |  #  |  $  |  %  |||||  :  |  "  |  <  |  >  |  ?  |
 //                                                                      //|  ^  |  &  |  *  |  (  |  )  ||||| KAPP|RSHFT| LALT|RCTRL| RGUI|
 //                                                                      //|  [  |  {  |  ]  |  }  |     |||||  ;  |  '  |  ,  |  .  |  /  |
-//                                                                      //    `   |   ~   |       |     |||||     |SYM_ENT|NUM_BSPC|FUN_DEL
+//                                                                      // LEY_ESC|   `   |  ~     |     |||||     |SYM_ENT|NUM_BSPC|FUN_DEL
 
 leyers                                                                  Function                                                           
 //-----------------------------------------------------------------     //---g-----c-----a-----s-----k---------k-----s-----a-----c-----g---
