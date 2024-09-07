@@ -37,12 +37,12 @@
 #define KR_S(keycode) &hrr RSHFT keycode
 #define KR_K(keycode) &hrr K_APP keycode
 //thumbs
-#define KL_ESCL &tmh LEYERS ESCAPE 
-#define KL_SPCN &tmh NAVGATION SPACE
-#define KL_TABM &kp TAB //&tmh MOUSE TAB
-#define KL_ENTS &tmh SYMBOLS ENTER
-#define KL_BSPCN &tmh NUMBERS BSPC
-#define KL_DELF &tmh FUNCTION DEL
+#define KL_ESC &tmh SYMBOLS ESCAPE 
+#define KL_SPC &tmh NAVGATION SPACE
+#define KL_TAB &tmh NUMBERS TAB  
+#define KL_ENT &tmh LEYERS ENTER
+#define KL_BSPC &kp BSPC //&tmh MOUSE BSPC
+#define KL_DEL &tmh FUNCTION DEL
 
 
 #define PT_CAM &kp LG(LS(O)) 
@@ -133,7 +133,7 @@
 &none    &kp Q         &kp W               &kp F          &kp P            &kp B             &kp J            &kp L           &kp U            &kp Y              &kp SEMI         &none
 &none    KL_G(A)       KL_C(R)             KL_A(S)        KL_S(T)          KL_K(G)           KR_K(M)          KR_S(N)         KR_A(E)          KR_C(I)            KR_G(O)          &none
 &none    &kp Z         &kp X               &ihl CIU C     &ihl COI D       &kp V             &kp K            &ihr COI H      &ihr CIU COMMA   &kp PERIOD         &kp SLASH        &none
-                       KL_ESCL             KL_SPCN        KL_TABM          &none             &none            KL_ENTS         KL_BSPCN         KL_DELF
+                       KL_ESC              KL_SPC         KL_TAB           &none             &none            KL_ENT          KL_BSPC          KL_DEL
                         >;
                 };
                 colemak_international {
@@ -142,7 +142,7 @@
 &none    &none         &none               &none          &none            &none             &none            KRA(L)          &none            &none              &none            &none
 &none    KRA(A)        &none               KRA(S)         &none            &none             &none            KRA(N)          KRA(E)           &none              KRA(O)           &none
 &none    KRA(Z)        KRA(X)              KRA(C)         &none            &none             &none            &none           &none            &none              &kp APOS         &none
-                       KL_ESCL             KL_SPCN        KL_TABM          &none             &none            KL_ENTS         KL_BSPCN         KL_DELF
+                       KL_ESC              KL_SPC         KL_TAB           &none             &none            KL_ENT          KL_BSPC          KL_DEL
                         >;
                 };
                 colemak_international_upper {
@@ -151,26 +151,26 @@
 &none    &none         &none               &none          &none            &none             &none            KRAS(L)         &none            &none              &none            &none
 &none    KRAS(A)       &none               KRAS(S)        &none            &none             &none            KRAS(N)         KRAS(E)          &none              KRAS(O)          &none
 &none    KRAS(Z)       KRAS(X)             KRAS(C)        &none            &none             &none            &none           &none            &none              &kp DQT          &none
-                       KL_ESCL             KL_SPCN        KL_TABM          &none             &none            KL_ENTS         KL_BSPCN         KL_DELF
+                       KL_ESC              KL_SPC         KL_TAB           &none             &none            KL_ENT          KL_BSPC          KL_DEL
                         >;
                 };
                 numbers {
                         bindings = <
 //----|--------------|-------------------|--------------|----------------|----------------||----------------|---------------|----------------|------------------|----------------|-------
-&none    &kp N1        &kp N2              &kp N3         &kp N4           &kp N5            &none            &none           &none            &none              &none            &none 
-&none    &kp N6        &kp N7              &kp N8         &kp N9           &kp N0            &kp K_APP        &kp RSHFT       &kp LALT         &kp RCTRL          &kp LGUI         &none
-&none    &kp EQUAL     &kp PLUS            &kp MINUS      &kp UNDER        &none             &none            &none           &kp RALT         &none              &none            &none
-                       &mo LEYERS          &kp BSLH       &kp PIPE         &none             &none            KL_ENTS         KL_BSPCN         KL_DELF
+&none    &none         &none               &none          &none            &none             &kp N1           &kp N2          &kp N3           &kp N4             &kp N5           &none
+&none    &kp LGUI      &kp LCTRL           &kp LALT       &kp LSHFT        &kp K_APP         &kp N6           &kp N7          &kp N8           &kp N9             &kp N0           &none
+&none    &none         &none               &kp RALT       &none            &none             &kp EQUAL        &kp PLUS        &kp MINUS        &kp UNDER          &none            &none
+                       KL_ESC              KL_SPC         KL_TAB           &none             &none            KL_ENT          &kp BSLH         &kp PIPE
                         >;
                 };
 				symbols {
                         bindings = <
 
 //----|--------------|-------------------|--------------|----------------|----------------||----------------|---------------|----------------|------------------|----------------|-------
-&none    &kp EXCL      &kp AT              &kp HASH       &kp DOLLAR       &kp PRCNT         &kp COLON        &kp DQT         &kp LT           &kp GT             &kp QMARK        &none 
-&none    &kp CARET     &kp AMPS            &kp ASTRK      &kp LPAR         &kp RPAR          &kp K_APP        &kp RSHFT       &kp LALT         &kp RCTRL          &kp LGUI         &none
-&none    &kp LBKT      &kp LBRC            &kp RBKT       &kp RBRC         &none             &kp SEMI         &kp APOS        &kp COMMA        &kp PERIOD         &kp SLASH        &none
-                       &mo LEYERS          &kp GRAVE      &kp TILDE        &none             &none            KL_ENTS         KL_BSPCN         KL_DELF
+&none    &kp QMARK     &kp GT              &kp LT         &kp DQT          &kp COLON         &kp EXCL         &kp AT          &kp HASH         &kp DOLLAR         &kp PRCNT        &none
+&none    &kp LGUI      &kp LCTRL           &kp LALT       &kp LSHFT        &kp K_APP         &kp CARET        &kp AMPS        &kp ASTRK        &kp LPAR           &kp RPAR         &none
+&none    &kp SLASH     &kp PERIOD          &kp COMMA      &kp APOS         &kp SEMI          &none            &kp LBKT        &kp LBRC         &kp RBKT           &kp RBRC         &none
+                       KL_ESC              KL_SPC         KL_TAB           &none             &none            KL_ENT          &kp GRAVE        &kp TILDE
                         >;
                 };
                 numpad {
@@ -179,7 +179,7 @@
 &none    &kp EXCL      &none               &none          &kp EQUAL        &kp PRCNT         &kp DOT          &kp KP_N7       &kp KP_N8        &kp KP_N9          &kp KP_MINUS     &none
 &none    &kp LBRC      &kp LBKT            &kp LPAR       &kp KP_SLASH     &kp LT            &kp COMMA        &kp KP_N4       &kp KP_N5        &kp KP_N6          &kp KP_PLUS      &none
 &none    &kp RBRC      &kp RBKT            &kp RPAR       &kp KP_MULTIPLY  &kp GT            &kp KP_N0        &kp KP_N1       &kp KP_N2        &kp KP_N3          &kp KP_ENTER     &none
-                       KL_ESCL             KL_SPCN        KL_TABM          &none             &none            KL_ENTS         KL_BSPCN         KL_DELF
+                       KL_ESC              KL_SPC         KL_TAB           &none             &none            KL_ENT          KL_BSPC          KL_DEL
                         >;
                 };
                 navigation {
@@ -188,7 +188,7 @@
 &none    &none         &kp LA(LS(TAB))       &kp LA(LC(TAB))     &kp LA(TAB)       &none               &kp INS          &kp HOME        &kp UP           &kp END            &kp LA(RIGHT)    &none
 &none    KL_G(0)       KL_C(LC(BSPC))        KL_A(LC(LS(TAB)))   KL_S(LC(TAB))     KL_K(LC(DEL))       &kp DEL          &kp LEFT        &kp DOWN         &kp RIGHT          &kp LA(LEFT)     &none
 &none    &none         &kp LC(LS(BSPC))      &kp LC(LG(LEFT))    &kp LC(LG(RIGHT)) &kp LC(LS(DEL))     &kp RGUI         &kp PG_DN       &kp PSCRN        &kp PG_UP          &kp K_APP        &none
-                       KL_ESCL               KL_SPCN             KL_TABM           &none               &none            KL_ENTS         &kp LC(BSPC)     &kp LC(DEL)
+                       KL_ESC                KL_SPC              KL_TAB            &none               &none            KL_ENT          &kp LC(BSPC)     &kp LC(DEL)
                         >;
                 };
                 function {
@@ -197,7 +197,7 @@
 &none    &kp F1        &kp F2              &kp F3         &kp F4           &kp F5            &kp F6           &kp F7          &kp F8           &kp F9             &kp F10          &none
 &none    KL_G(F11)     KL_C(F12)           KL_A(F13)      KL_S(F14)        KL_K(F15)         KR_K(F16)        KR_S(F17)       KR_A(F18)        KR_C(F19)          KR_G(F20)        &none
 &none    &kp F21       &kp F22             &kp F23        &none            &none             &none            &none           &none            &none              &none            &none
-                       KL_ESCL             KL_SPCN        KL_TABM          &none             &none            KL_ENTS         KL_BSPCN         KL_DELF
+                       KL_ESC              KL_SPC         KL_TAB           &none             &none            KL_ENT          KL_BSPC          KL_DEL
                         >;
                 };
                 technical {
@@ -206,16 +206,16 @@
 &none    &bt BT_CLR    &none               &out OUT_BLE   &out OUT_USB     &out OUT_TOG      &kp C_VOL_UP     &none           &kp C_NEXT       &kp C_BRI_UP       &kp CAPS         &none
 &none    &bt BT_SEL 4  &bt BT_SEL 3        &bt BT_SEL 2   &bt BT_SEL 1     &bt BT_SEL 0      &kp C_MUTE       &kp C_PLAY      &kp C_PP         &kp C_BRI_DN       &kp SLCK         &none
 &none    &bt BT_PRV    &bt BT_NXT          &none          &none            &none             &kp C_VOL_DN     &kp C_STOP      &kp C_PREV       &kp PAUSE_BREAK    &kp KP_NUM       &none
-                       KL_ESCL             KL_SPCN        KL_TABM          &none             &none            KL_ENTS         KL_BSPCN         KL_DELF
+                       KL_ESC              KL_SPC         KL_TAB           &none             &none            KL_ENT          KL_BSPC          KL_DEL
                         >;
                 };
                 leyers {
                         bindings = <
 //----|--------------|-------------------|--------------|----------------|----------------||----------------|---------------|----------------|------------------|----------------|-------
-&none    &none         &none               &none          &none            &none             PT_CAM           &to NUMPAD      &to LEYERS       &none              &to NUMBERS      &none
-&none    &none         &none               &none          &none            &none             PT_MIC           &to COL         &to COL          &to COL            &to SYMBOLS      &none
-&none    &none         &none               &none          &none            &none             PT_ALL           &to TECHMEDIA   &to NAVGATION    &none              &to FUNCTION     &none
-                       KL_ESCL             KL_SPCN        KL_TABM          &none             &none            KL_ENTS         KL_BSPCN         KL_DELF
+&none    &to NUMBERS   &none               &to LEYERS     &to NUMPAD       PT_CAM            &none            &none           &none            &none              &none            &none
+&none    &to SYMBOLS   &to COL             &to COL        &to COL          PT_MIC            &none            &none           &none            &none              &none            &none
+&none    &to FUNCTION  &none               &to NAVGATION  &to TECHMEDIA    PT_ALL            &none            &none           &none            &none              &none            &none
+                       KL_ESC              KL_SPC         KL_TAB           &none             &none            KL_ENT          KL_BSPC          KL_DEL
                         >;
                 };
         };
