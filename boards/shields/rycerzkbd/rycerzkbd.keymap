@@ -13,13 +13,16 @@
 #define COL 0
 #define COI 1
 #define CIU 2
-#define NUMBERS 3
-#define SYMBOLS 4
-#define NUMPAD 5
-#define NAVGATION 6
-#define FUNCTION 7
-#define TECHMEDIA 8
-#define LEYERS 9
+#define QWE 3
+#define QWI 4
+#define QIU 5
+#define NUMBERS 6
+#define SYMBOLS 7
+#define NUMPAD 8
+#define NAVGATION 9
+#define FUNCTION 10
+#define TECHMEDIA 11
+#define LEYERS 12
 
 
 #define KRA(keycode) &kp RA(keycode)
@@ -151,6 +154,34 @@
 &none    &none         &none               &none          &none            &none             &none            KRAS(L)         &none            &none              &none            &none
 &none    KRAS(A)       &none               KRAS(S)        &none            &none             &none            KRAS(N)         KRAS(E)          &none              KRAS(O)          &none
 &none    KRAS(Z)       KRAS(X)             KRAS(C)        &none            &none             &none            &none           &none            &none              &kp DQT          &none
+                       KL_ESC              KL_SPC         KL_TAB           &none             &none            KL_ENT          KL_BSPC          KL_DEL
+                        >;
+                };
+                qwerty {
+                        bindings = <
+//----|--------------|-------------------|--------------|----------------|----------------||----------------|---------------|----------------|------------------|----------------|-------						
+&none    &kp Q         &kp W               &kp E          &kp R            &kp T             &kp Y            &kp U           &kp I            &kp O              &kp P            &none
+&none    KL_G(A)       KL_C(S)             KL_A(D)        KL_S(F)          KL_K(G)           KR_K(H)          KR_S(J)         KR_A(E)          KR_C(I)            KR_G(SEMI)       &none
+&none    &kp Z         &kp X               &ihl QIU C     &ihl QWI V       &kp B             &kp N            &ihr QWI M      &ihr QIU COMMA   &kp PERIOD         &kp SLASH        &none
+                       KL_ESC              KL_SPC         KL_TAB           &none             &none            KL_ENT          KL_BSPC          KL_DEL
+                        >;
+                };
+                qwerty_international {
+                        bindings = <
+//----|--------------|-------------------|--------------|----------------|----------------||----------------|---------------|----------------|------------------|----------------|-------
+&none    &none         &none               KRA(E)         &none            &none             &none            &none           &none            KRA(O)             &none            &none
+&none    KRA(A)        KRA(S)              &none          &none            &none             &none            &none           &none            KRA(L)             &none            &none
+&none    KRA(Z)        KRA(X)              KRA(C)         &none            &none             KRA(N)           &none           &none            &none              &kp APOS         &none
+                       KL_ESC              KL_SPC         KL_TAB           &none             &none            KL_ENT          KL_BSPC          KL_DEL
+                        >;
+                };
+                qwerty_international_upper {
+                        bindings = <
+
+//----|--------------|-------------------|--------------|----------------|----------------||----------------|---------------|----------------|------------------|----------------|-------
+&none    &none         &none               KRAS(E)        &none            &none             &none            &none           &none            KRAS(O)            &none            &none
+&none    KRAS(A)       KRAS(S)             &none          &none            &none             &none            &none           &none            KRAS(L)            &none            &none
+&none    KRAS(Z)       KRAS(X)             KRAS(C)        &none            &none             KRAS(N)          &none           &none            &none              &kp DQT          &none
                        KL_ESC              KL_SPC         KL_TAB           &none             &none            KL_ENT          KL_BSPC          KL_DEL
                         >;
                 };
