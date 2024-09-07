@@ -203,9 +203,9 @@
                 technical {
                         bindings = <
 //----|--------------|-------------------|--------------|----------------|----------------||----------------|---------------|----------------|------------------|----------------|-------
-&none    &bt BT_CLR    &none               &out OUT_BLE   &out OUT_USB     &out OUT_TOG      &cp C_VOL_UP     &none           &cp C_NEXT       &cp C_BRI_UP       &kp CAPS         &none
-&none    &bt BT_SEL 4  &bt BT_SEL 3        &bt BT_SEL 2   &bt BT_SEL 1     &bt BT_SEL 0      &cp C_MUTE       &cp C_PLAY      &cp C_PP         &cp C_BRI_DN       &kp SLCK         &none
-&none    &bt BT_PRV    &bt BT_NXT          &none          &none            &none             &cp C_VOL_DN     &cp C_STOP      &cp C_PREV       &kp PAUSE_BREAK    &kp KP_NUM       &none
+&none    &bt BT_CLR    &none               &out OUT_BLE   &out OUT_USB     &out OUT_TOG      &kp C_VOL_UP     &none           &kp C_NEXT       &kp C_BRI_UP       &kp CAPS         &none
+&none    &bt BT_SEL 4  &bt BT_SEL 3        &bt BT_SEL 2   &bt BT_SEL 1     &bt BT_SEL 0      &kp C_MUTE       &kp C_PLAY      &kp C_PP         &kp C_BRI_DN       &kp SLCK         &none
+&none    &bt BT_PRV    &bt BT_NXT          &none          &none            &none             &kp C_VOL_DN     &kp C_STOP      &kp C_PREV       &kp PAUSE_BREAK    &kp KP_NUM       &none
                        KL_ESCL             KL_SPCN        KL_TABM          &none             &none            KL_ENTS         KL_BSPCN         KL_DELF
                         >;
                 };
