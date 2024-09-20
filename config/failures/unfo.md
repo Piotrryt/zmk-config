@@ -1,1 +1,0 @@
-tu są oje porażki
