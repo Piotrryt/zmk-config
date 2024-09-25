@@ -162,7 +162,7 @@
                         bindings = <
 //----|--------------|-------------------|--------------|----------------|----------------||----------------|---------------|----------------|------------------|----------------|-------						
 &none    &kp Q         &kp W               &kp E          &kp R            &kp T             &kp Y            &kp U           &kp I            &kp O              &kp P            &none
-&none    KL_G(A)       KL_C(S)             KL_A(D)        KL_S(F)          KL_K(G)           KR_K(H)          KR_S(J)         KR_A(E)          KR_C(I)            KR_G(SEMI)       &none
+&none    KL_G(A)       KL_C(S)             KL_A(D)        KL_S(F)          KL_K(G)           KR_K(H)          KR_S(J)         KR_A(K)          KR_C(L)            KR_G(SEMI)       &none
 &none    &kp Z         &kp X               &ihl QIU C     &ihl QWI V       &kp B             &kp N            &ihr QWI M      &ihr QIU COMMA   &kp PERIOD         &kp SLASH        &none
                        KL_ESC              KL_SPC         KL_TAB           &none             &none            KL_ENT          KL_BSPC          KL_DEL
                         >;
